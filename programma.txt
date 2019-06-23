@@ -1,0 +1,73 @@
+﻿Sicurezza (corso di 6 crediti)
+
+Docente 
+Prof. Francesco Bergadano (http://www.di.unito.it/~fpb)
+
+Programma del Corso
+
+1. Introduzione
+- Classificazione degli attacchi a sistemi di calcolo
+- Principali strumenti per la sicurezza delle reti
+
+2. Fondamenti crittografici
+	2.1 Crittografia convenzionale
+	2.2 Crittografia a chiave pubblica
+	2.3 Funzioni di hash
+	2.4 Autenticazione e firma elettronica
+
+3. Sicurezza delle reti private
+	3.1 Sicurezza su una rete locale
+		- sicurezza ai diversi livelli della pila ISO/OSI
+		- 'sniffing' e 'spoofing'
+		- denial of service
+	3.2 Sistemi per la protezione da programmi esterni
+		- virus, worm, trojan horse
+		- malware nei sistemi virtualizzati
+		- principi e soluzioni antivirus
+	3.3 Firewall
+		- filtri a livello IP
+		- filtri application-aware
+		- mascheramento indirizzi interni
+		- firewall con proxy applicativo
+		- topologia rete privata con firewall e DMZ
+		- principali prodotti e soluzioni
+	3.4 Reti private virtuali
+		- procollo IPSEC (tunnel mode e transport mode)
+		- Authentication Header ed Encapsulating Security Payload
+		- principali prodotti e soluzioni
+	3.5 Vulnerabilita’, intrusioni e Intrusion Detection
+		- vulnerabilita’ a livello applicativo. Esempi: injection e XSS
+		- metodologia e classificazione OWASP
+		- anomaly detection, misuse detection
+
+4. Seminari e approfondimenti (vedi sezioni su Moodle per l’anno in corso)
+
+Libro di testo:
+William Stallings: Cryptography and Network Security
+Prentice Hall, IV edition
+
+Capitoli del libro da studiare (a integrazione e per approfondimento di quanto svolto a lezione, secondo il programma sopra elencato):
+
+1 Introduction
+2 Classical encryption techniques
+3 Block ciphers and DES
+4.1 - 4.3 Finite fields
+6.1 - 6.2 More on symmetric ciphers
+8 introduction to number thory
+9 PK cryptography and RSA
+10.2 Diffie Hellman
+11 Message Authentication and Hash Functions
+12.1 - 12.3 Hash and MAC algorithms
+13.1 Digital Signatures
+16 IP security
+18 Intruders
+19 Malicious Software
+20 Firewalls
+
+Testi per consultazione:
+Bruce Schneier: Applied Cryptography, John Wiley and sons, 1994.
+
+Prerequisiti (consigliati):
+Sistemi Operativi
+Fondamenti (parte su complessita`)
+Reti di calcolatori (TCP/IP)
