@@ -18,6 +18,7 @@
 6. Descrivere l’attacco di tipo DOS noto come "syn flooding”
 
 ## 2013-09-02
+
 1. La certificazione ISO 27001 riguarda:
    1. un information security management system
    2. la sicurezza perimetralee in particolare i firewall
@@ -49,7 +50,7 @@
    3. provoca una errata associazione tra indirizzi DNS e indirizzi IP
    4. provoca una errata associazione tra indirizzi MAC  e indirizzi IP
    5. provoca una errata associazione tra URL http e indirizzi IP
-3. Definizione di radice primitiva di un numero q e metodo per generarne una **ERRORE**
+3. Definizione di radice primitiva di un numero $q$ e metodo per generarne una
 4. Dimostrare che $ab\ mod\ M = (a\ mod\ M)(b\ mod\ M)\ mod\ M$
 5. Disegnare una topologia di rete locale con firewall in HA (high availability)
 6. Differenza tra modalità tunnel e transport in una VPN
@@ -61,8 +62,8 @@
    1. garantire la sicurezza di un firewall
    2. certificare che un firewall usa correttamente le firme elettroniche
    3. garantire con una chiave pubblica le ACL di un firewall
-   4. associare in modo certo un soggetto adunachiave pubblica
-   5. associare in mode certo una chiave pubblica a una chiave privata
+   4. associare in modo certo un soggetto ad una chiave pubblica
+   5. associare in modo certo una chiave pubblica a una chiave privata
 3. L’attacco noto come XSS (cross site scripting)
    1.  permette di eseguire codice sul server attaccato
    2.  permette di eseguire codice sul browser della vittima
@@ -94,12 +95,12 @@
 ## 2015-06-25
 1. Descrivere il formato dello Authentication Header Ipsec (AH) e commentare il significato e l’utilizzo di ogni campo
 2. La firma grafometrica
-   1. è la scansione della firma autografa
-   2. comprende  la  scansione  della  firma  autografa  e  altri  dati biometrici cifrati
-   3. comprende la scansione della firma autografa e altri dati biometrici non cifrati
-   4. è l’encryption RSA, fatta  con  la chiave privata, del digest del documento da firmare
-   5. è il digest dell’encryption RSA, fatta con la chiave privata, del documento da firmare
-3. L’attacco noto come CSRF(cross site request forgery)
+   [ ] è la scansione della firma autografa
+   [X] comprende  la  scansione  della  firma  autografa  e  altri  dati biometrici cifrati
+   [ ] comprende la scansione della firma autografa e altri dati biometrici non cifrati
+   [ ] è l’encryption RSA, fatta  con  la chiave privata, del digest del documento da firmare
+   [ ] è il digest dell’encryption RSA, fatta con la chiave privata, del documento da firmare
+3. L’attacco noto come CSRF (cross site request forgery)
    1. permette di eseguire codice dannoso sul server web attaccato
    2. permette di eseguire codice dannoso sul browser  della vittima
    3. permette di eseguire codice dannoso sia sul browser della vittima che sul server
@@ -108,15 +109,15 @@
 4.  Nello standard ISO 27001, che cosa sono i “controlli” e in base a quali criteri vengono selezionati?
 5.  Per quale motivo il one-time pad è più sicuro di un cifrario di Vernam con una chiave di lunghezza fissa? 
 6.  Dimostrare le due seguenti proprietà: 
-    1.  (ab) mod M = [(a mod M)(b mod M)]mod M
-    2.  (ab) mod M = (a mod M)bmod M
+    1.  $(ab)\ mod\ M = [(a\ mod\ M)(b\ mod\ M)]\ mod\ M$
+    2.  $(ab)\ mod\ M = (a\ mod\ M)\ b\ mod\ M$
 
 
 
 ## 2015-07-10
 1.  Descrivere la funzione di hash SHA-1
 2.  Il metodo di scambio chiavi di Diffie-Hellman
-    1.  si  basasu particolari attacchi di tipo man in the middle
+    1.  si  basa su particolari attacchi di tipo man in the middle
     2.  si  basa  sulla difficoltà di calcolare il  logaritmo discreto
     3.  si basa sulla difficoltà di fattorizzare rapidamente un grande numero primo
     4.  si basa sulla difficoltà di fattorizzare il prodotto didue grandi  numeri primi
@@ -129,7 +130,9 @@
    5. può ottenere cookie del browser e utilizzarli successivamente come autenticazione
 4. Descrivere la vulnerabilità OWASP nota come “insecure direct object reference”
 5. Che cos’è una marca temporale (timestamp)?
-6. Consideriamo il cifrario RSA con modulo n=pq, esponente privato d ed esponente pubblico e. Sia il messaggio da cifrare $m=iq<n$. Cifrando m otteniamo $c = m^e\ mod\ n$. Dimostrare che decifrando c otteniamo nuovamente m, ovvero che $c^d\ mod\ n = m$.
+6. Consideriamo il cifrario RSA con modulo $n=pq$, esponente privato $d$ ed esponente pubblico $e$.
+    Sia il messaggio da cifrare $m=iq<n$.
+    Cifrando $m$ otteniamo $c = m^e\ mod\ n$. Dimostrare che decifrando $c$ otteniamo nuovamente $m$, ovvero che $c^d\ mod\ n = m$.
 
 ## 2015-09-02
 
@@ -146,16 +149,16 @@
    3. contiene una firma della Certification Authority
    4. contiene il nome dell’organismo accreditato per la certificazione ISO 27001
    5.  contiene la chiave privata cifrata dell’organismo accreditato per la certificazione ISO 27001
-4. Come funziona un firewall ridondato (anche detto “HA” –high availability)
+4. Come funziona un firewall ridondato (anche detto “HA” – high availability)
 5. Che tipo di cifrario implementa una macchina a rotori, e quali sono le sue debolezze?
-6. Fare un esempio concreto di Cross-site Scripting (XSS)
+6. Fare un esempio concreto di Cross-Site Scripting (XSS)
 
 ## 2016-06-16
 1. Descrivere il funzionamento di un attacco basato su “Buffer Overflow”
 2. Secondo OWASP, il livello di rischio legato ad una vulnerabilità dipende da:
    1. facilità di sfruttarla e impatto del corrispondente attacco
    2. facilità di enumerare le password dei corrispondenti utenti (brute force)
-   3. posizione della vulnerabilità nellaOWASP top ten
+   3. posizione della vulnerabilità nella OWASP top ten
    4. numero di exploit di quella vulnerabilità / numero di exploit totali
    5. si rimanda allo standard ISO 27001
 3. Una banconota elettronica / bitcoin
@@ -185,12 +188,13 @@
 4. Perché una funzione Hash(M) definita come Xor dei blocchi di M non è collision resistant
 5. Effetti della frammentazione IP sul comportamento di un firewall di tipo packet filter
 6. Si consideri questo programma C:
-   int main(int argc, char** argv) {
+   
+       int main(int argc, char** argv) {
        int cookie;
        char buf[80];
        gets(buf);
        if (cookie == 0x41424344)
-       printf("you win!\n");
+       printf("you win!");
        }
    Spiegare in concreto come eseguirlo, sfruttando la vulnerabilità della “gets” per forzare l’output “you win”
 
@@ -235,11 +239,11 @@
 
 1. Descrivere il concetto di DDOS (distributed denial of service)
 2. Per effettuare un’analisi del rischio secondo la metodologia OWASP, si utilizza la formula:
-   1. Probabilità = f(gravità del rischio, vulnerabilità)
-   2. Gravità del rischio = f(probabilità,impatto)
-   3. Probabilità = f(agente della minaccia, impatto)
-   4. Impatto = f(impatto tecnologico, probabilità)
-   5. Gravità del rischio = f(impattotecnologico, impatto di business)
+   1. Probabilità = $f(gravità\ del\ rischio, vulnerabilità)$
+   2. Gravità del rischio = $f(probabilità,impatto)$
+   3. Probabilità = $f(agente\ della\ minaccia, impatto)$
+   4. Impatto = $f(impatto\ tecnologico, probabilità)$
+   5. Gravità del rischio = $f(impatto\ tecnologico, impatto\ di\ business)$
 3. In una VPN “tunnel”
    1. è tutto cifrato, tranne il MAC address
    2. l’indirizzo IP del solo terminatore sorgente è cifrato
@@ -266,7 +270,7 @@
    4. È un firewall application-aware
    5. È un firewall di tipo packet-filter che evita la perdita di pacchetti
 4. Definire il metodo di scambio di chiavi di Diffie-Hellman
-5. Discutere, nel metodo di scambio di chiavi di Diffie-Hellman come descritto nella domanda 3, la complessità computazionale di ciascun passo
+5. Discutere, nel metodo di scambio di chiavi di Diffie-Hellman come descritto nella domanda 4, la complessità computazionale di ciascun passo
 6. Descrivere il protocollo ESP (encapsulating security payload) nelle reti private virtuali IPSEC
 
 ## 2017-09-18
