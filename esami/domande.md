@@ -77,16 +77,16 @@
 ## 2014-07-11
 1. Descrivere la metodologia di analisi dei rischi definita da OWASP
 2. In IPSEC con AH il MAC autentica
-   1. il solo payload
-   2. il payload e i campi variabili dell’intestazioneIP
-   3. il payload e i campi fissi e variabili dell’intestazione IP
-   4. il payload e i campi fissi dell’intestazione IP
-   5. i soli campi variabili dell’intestazione  IPU
+   1. [ ] il solo payload
+   2. [ ] il payload e i campi variabili dell’intestazioneIP
+   3. [ ] il payload e i campi fissi e variabili dell’intestazione IP
+   4. [ ] il payload e i campi fissi dell’intestazione IP
+   5. [ ] i soli campi variabili dell’intestazione  IPU
 3. Un cifrario a sostituzione monoalfabetica
-   1. sostituisce ad ogni singola lettera del testo in chiaro un’altra lettera, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
-   2. sostituisce ad ogni coppia di lettere del testo in chiaro un’altra coppia di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
+   1. [ ] sostituisce ad ogni singola lettera del testo in chiaro un’altra lettera, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
+   2. [ ] sostituisce ad ogni coppia di lettere del testo in chiaro un’altra coppia di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    3. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare una sola volta man mano che si procede nello scorrimento del testo stesso
-   4. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
+   4. [ ] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    5. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che non può mai cambiare man mano che si procede nello scorrimento del testo stesso
 4. Definire che cos’è una funzione di hash resistente alle collisioni
 5. Differenza tra un packet filter e un firewall applicativo
@@ -95,17 +95,17 @@
 ## 2015-06-25
 1. Descrivere il formato dello Authentication Header Ipsec (AH) e commentare il significato e l’utilizzo di ogni campo
 2. La firma grafometrica
-   [ ] è la scansione della firma autografa
-   [X] comprende  la  scansione  della  firma  autografa  e  altri  dati biometrici cifrati
-   [ ] comprende la scansione della firma autografa e altri dati biometrici non cifrati
-   [ ] è l’encryption RSA, fatta  con  la chiave privata, del digest del documento da firmare
-   [ ] è il digest dell’encryption RSA, fatta con la chiave privata, del documento da firmare
+   1. [ ] è la scansione della firma autografa
+   2. [X] comprende  la  scansione  della  firma  autografa  e  altri  dati biometrici cifrati
+   3. [ ] comprende la scansione della firma autografa e altri dati biometrici non cifrati
+   4. [ ] è l’encryption RSA, fatta  con  la chiave privata, del digest del documento da firmare
+   5. [ ] è il digest dell’encryption RSA, fatta con la chiave privata, del documento da firmare
 3. L’attacco noto come CSRF (cross site request forgery)
-   1. permette di eseguire codice dannoso sul server web attaccato
-   2. permette di eseguire codice dannoso sul browser  della vittima
-   3. permette di eseguire codice dannoso sia sul browser della vittima che sul server
-   4. usa le credenziali attive sul browser per eseguire delle operazioni non desiderate
-   5. intercetta i cookie presenti sul browser per utilizzarli successivamente come autenticazione
+   1. [ ] permette di eseguire codice dannoso sul server web attaccato
+   2. [ ] permette di eseguire codice dannoso sul browser  della vittima
+   3. [ ] permette di eseguire codice dannoso sia sul browser della vittima che sul server
+   4. [ ] usa le credenziali attive sul browser per eseguire delle operazioni non desiderate
+   5. [ ] intercetta i cookie presenti sul browser per utilizzarli successivamente come autenticazione
 4.  Nello standard ISO 27001, che cosa sono i “controlli” e in base a quali criteri vengono selezionati?
 5.  Per quale motivo il one-time pad è più sicuro di un cifrario di Vernam con una chiave di lunghezza fissa? 
 6.  Dimostrare le due seguenti proprietà: 
@@ -117,17 +117,17 @@
 ## 2015-07-10
 1.  Descrivere la funzione di hash SHA-1
 2.  Il metodo di scambio chiavi di Diffie-Hellman
-    1.  si  basa su particolari attacchi di tipo man in the middle
-    2.  si  basa  sulla difficoltà di calcolare il  logaritmo discreto
-    3.  si basa sulla difficoltà di fattorizzare rapidamente un grande numero primo
-    4.  si basa sulla difficoltà di fattorizzare il prodotto didue grandi  numeri primi
-    5.  si basa sulla difficoltà di calcolare l’esponente modulare
+    1. [ ] si  basa su particolari attacchi di tipo man in the middle
+    2. [ ] si  basa  sulla difficoltà di calcolare il  logaritmo discreto
+    3. [ ] si basa sulla difficoltà di fattorizzare rapidamente un grande numero primo
+    4. [ ] si basa sulla difficoltà di fattorizzare il prodotto didue grandi  numeri primi
+    5. [ ] si basa sulla difficoltà di calcolare l’esponente modulare
 3. L’attacco noto come XSS (cross site scripting)
-   1. permette di  eseguire codice  dannoso sul server  web attaccato
-   2. permette di intercettare password memorizzate su un database
-   3. permette di  eseguire  codice  dannoso  sia  sul browser della vittima che sul server
-   4. usa  le  credenziali  attive sul browser per eseguire delle operazioni non desiderate
-   5. può ottenere cookie del browser e utilizzarli successivamente come autenticazione
+   1. [ ] permette di  eseguire codice  dannoso sul server  web attaccato
+   2. [ ] permette di intercettare password memorizzate su un database
+   3. [ ] permette di  eseguire  codice  dannoso  sia  sul browser della vittima che sul server
+   4. [ ] usa  le  credenziali  attive sul browser per eseguire delle operazioni non desiderate
+   5. [ ] può ottenere cookie del browser e utilizzarli successivamente come autenticazione
 4. Descrivere la vulnerabilità OWASP nota come “insecure direct object reference”
 5. Che cos’è una marca temporale (timestamp)?
 6. Consideriamo il cifrario RSA con modulo $n=pq$, esponente privato $d$ ed esponente pubblico $e$.
@@ -138,17 +138,17 @@
 
 1. Differenza tra disaster recovery e sistemi di backup
 2. Il numero di moltiplicazioni necessario per cifrare o decifrare con RSA è
-   1. lineare rispetto al modulo
-   2. lineare rispetto al numero di bit del modulo
-   3.  esponenzialerispetto al modulo
-   4.  esponenziale rispetto al numero di bit del modulo
-   5.  esponenziale rispetto al numero di bit delle chiavi
+   1. [ ] lineare rispetto al modulo
+   2. [ ] lineare rispetto al numero di bit del modulo
+   3. [ ] esponenzialerispetto al modulo
+   4. [ ] esponenziale rispetto al numero di bit del modulo
+   5. [ ] esponenziale rispetto al numero di bit delle chiavi
 3. Un certificato di chiave pubblica
-   1. contiene la chiave privata in chiaro di una Certification Authority
-   2. contiene la chiave privata cifrata di una Certification Authority
-   3. contiene una firma della Certification Authority
-   4. contiene il nome dell’organismo accreditato per la certificazione ISO 27001
-   5.  contiene la chiave privata cifrata dell’organismo accreditato per la certificazione ISO 27001
+   1. [ ] contiene la chiave privata in chiaro di una Certification Authority
+   2. [ ] contiene la chiave privata cifrata di una Certification Authority
+   3. [ ] contiene una firma della Certification Authority
+   4. [ ] contiene il nome dell’organismo accreditato per la certificazione ISO 27001
+   5. [ ] contiene la chiave privata cifrata dell’organismo accreditato per la certificazione ISO 27001
 4. Come funziona un firewall ridondato (anche detto “HA” – high availability)
 5. Che tipo di cifrario implementa una macchina a rotori, e quali sono le sue debolezze?
 6. Fare un esempio concreto di Cross-Site Scripting (XSS)
@@ -156,17 +156,17 @@
 ## 2016-06-16
 1. Descrivere il funzionamento di un attacco basato su “Buffer Overflow”
 2. Secondo OWASP, il livello di rischio legato ad una vulnerabilità dipende da:
-   1. facilità di sfruttarla e impatto del corrispondente attacco
-   2. facilità di enumerare le password dei corrispondenti utenti (brute force)
-   3. posizione della vulnerabilità nella OWASP top ten
-   4. numero di exploit di quella vulnerabilità / numero di exploit totali
-   5. si rimanda allo standard ISO 27001
+   1. [ ] facilità di sfruttarla e impatto del corrispondente attacco
+   2. [ ] facilità di enumerare le password dei corrispondenti utenti (brute force)
+   3. [ ] posizione della vulnerabilità nella OWASP top ten
+   4. [ ] numero di exploit di quella vulnerabilità / numero di exploit totali
+   5. [ ] si rimanda allo standard ISO 27001
 3. Una banconota elettronica / bitcoin
-   1. contiene un numero seriale visibile a tutti, in modo da evitare la doppia spesa
-   2. ha un valore economico conosciuto da tutti, in modo da rendere possibile la spesa
-   3. contiene un numero seriale “blinded”, ovvero nascosto
-   4. contiene un valore economico “blinded”, ovvero nascosto
-   5. ha un valore economico, ma non ha un numero seriale
+   1. [ ] contiene un numero seriale visibile a tutti, in modo da evitare la doppia spesa
+   2. [ ] ha un valore economico conosciuto da tutti, in modo da rendere possibile la spesa
+   3. [ ] contiene un numero seriale “blinded”, ovvero nascosto
+   4. [ ] contiene un valore economico “blinded”, ovvero nascosto
+   5. [ ] ha un valore economico, ma non ha un numero seriale
 4. Il concetto di “Business Continuity”
 5. Dimostrare che, se $X|Y$ e $X|Z$, allora $X|(iY+jZ)$ per ogni intero $i,j$
 6. Spiegare il funzionamento e lo scopo della “Anti-replay window” in una VPN con IPSEC
@@ -174,17 +174,17 @@
 ## 2016-07-12
 1. Descrivere il metodo di generazione delle chiavi del cifrario RSA, e discuterne la complessità computazionale
 2. La protezione da memory corruption nota come “canarino”:
-   1. viene realizzata dal sistema operativo
-   2. viene realizzata dal layer IPC
-   3. viene realizzata dal compilatore
-   4. viene realizzata dal programmatore
-   5. non è realizzabile in pratica
+   1. [ ] viene realizzata dal sistema operativo
+   2. [ ] viene realizzata dal layer IPC
+   3. [ ] viene realizzata dal compilatore
+   4. [ ] viene realizzata dal programmatore
+   5. [ ] non è realizzabile in pratica
 3. Il NAPT (network address and port translation)
-   1. permette di avere un solo indirizzo interno, diverso dall’indirizzo pubblico esterno
-   2. permette di avere più indirizzi interni, purché identici agli indirizzi pubblici esterni
-   3. permette di avere piu’ indirizzi interni, purche’ meno numerosi di quelli esterni
-   4. permette di avere piu’ indirizzi interni, anche con un solo indirizzo pubblico esterno
-   5. permette di avere un solo indirizzo interno, e piu’ indirizzi pubblici esterni
+   1. [ ] permette di avere un solo indirizzo interno, diverso dall’indirizzo pubblico esterno
+   2. [ ] permette di avere più indirizzi interni, purché identici agli indirizzi pubblici esterni
+   3. [ ] permette di avere piu’ indirizzi interni, purche’ meno numerosi di quelli esterni
+   4. [ ] permette di avere piu’ indirizzi interni, anche con un solo indirizzo pubblico esterno
+   5. [ ] permette di avere un solo indirizzo interno, e piu’ indirizzi pubblici esterni
 4. Perché una funzione Hash(M) definita come Xor dei blocchi di M non è collision resistant
 5. Effetti della frammentazione IP sul comportamento di un firewall di tipo packet filter
 6. Si consideri questo programma C:
@@ -202,17 +202,17 @@
 
 1. Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità
 2. La tecnica nota come ARP poisoning
-   1. realizza un buffer overflow sul server ARP
-   2. realizza un buffer overflow sul firewall
-   3. invia una risposta ARP con indirizzi IP modificati
-   4. invia una risposta ARP con indirizzi MAC modificati
-   5. invia una risposta ARP causando un buffer overflow
+   1. [ ] realizza un buffer overflow sul server ARP
+   2. [ ] realizza un buffer overflow sul firewall
+   3. [ ] invia una risposta ARP con indirizzi IP modificati
+   4. [ ] invia una risposta ARP con indirizzi MAC modificati
+   5. [ ] invia una risposta ARP causando un buffer overflow
 3. Il Syn flooding
-   1. è un attacco di buffer overflow
-   2. è un attacco DOS che può essere utilmente abbinato ad IP spoofing
-   3. è un attacco DOS, non abbinabile ad IP spoofing
-   4. richiede una modifica del layer TCP del server
-   5. permette di modificare i cookie di sessione
+   1. [ ] è un attacco di buffer overflow
+   2. [x] è un attacco DOS che può essere utilmente abbinato ad IP spoofing
+   3. [ ] è un attacco DOS, non abbinabile ad IP spoofing
+   4. [ ] richiede una modifica del layer TCP del server
+   5. [ ] permette di modificare i cookie di sessione
 4. Dimostrare che esistono infiniti numeri primi e discuterne le conseguenze in crittologia
 5. Discutere il concetto di non disconoscibilità nella firma elettronica
 6. Descrivere il concetto di DMZ, con una possibile topologia di rete, e spiegare perché è utile per la sicurezza di una rete locale
@@ -277,17 +277,17 @@
 
 1. Descrivere brevemente tre delle top ten vulnerabilities di una Web application secondo Owasp
 2. Un virus polimorfo:
-   1. Si comporta in modo diverso a seconda del sistema operativo vittima
-   2. Si comporta in modo diverso per applicazioni Web e per sistemi mobile
-   3. Cambia ad ogni sua “riproduzione”
-   4. Cambia ad ogni sua “esecuzione”
-   5. Cambia ad ogni scansione dell’antivirus
+   1. [ ] Si comporta in modo diverso a seconda del sistema operativo vittima
+   2. [ ] Si comporta in modo diverso per applicazioni Web e per sistemi mobile
+   3. [ ] Cambia ad ogni sua “riproduzione”
+   4. [ ] Cambia ad ogni sua “esecuzione”
+   5. [ ] Cambia ad ogni scansione dell’antivirus
 3. Una VPN IPSEC:
-   1. Cifra ma non può autenticare
-   2. Autentica ma non può cifrare
-   3. Si situa nella pila ISO-OSI sopra il livello link
-   4. Si situa nella pila ISO-OSI sopra il livello di rete
-   5. Si situa nella pila ISO-OSI sopra il livello di trasporto
+   1. [ ] Cifra ma non può autenticare
+   2. [ ] Autentica ma non può cifrare
+   3. [ ] Si situa nella pila ISO-OSI sopra il livello link
+   4. [ ] Si situa nella pila ISO-OSI sopra il livello di rete
+   5. [ ] Si situa nella pila ISO-OSI sopra il livello di trasporto
 4. Discutere i limiti di un firewall di tipo packet filter
 5. Spiegare perché il teorema della domanda 5 serve per il calcolo dell’inverso moltiplicativo in RSA
 6. Dimostrare che dati due interi $a$ e $b$, esistono altri due interi $x$ e $y$, tali che $ax+by=\ MCD(a,b)$
