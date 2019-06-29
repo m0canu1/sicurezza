@@ -1,17 +1,17 @@
 ## 2013-07-08
 
 1. La certificazione ISO 27001 e' rilasciata in Italia da:
-   1. OWASP
-   2. un Organismo di Certificazione Accreditato da OWASP
-   3. Accredia
-   4. un Organismo di Certificazione Accreditato da Accredia
-   5. una Autorità di Certificazione abilitata dall’Agenzia per l’Italia Digitale
+   1. [ ] OWASP
+   2. [ ] un Organismo di Certificazione Accreditato da OWASP
+   3. [ ] Accredia
+   4. [x] un Organismo di Certificazione Accreditato da Accredia
+   5. [ ] una Autorità di Certificazione abilitata dall’Agenzia per l’Italia Digitale
 2. In IPSEC vengono cifrate le seguenti informazioni:
-   1. header di livello 2
-   2. MAC address
-   3. trailer di livello 2
-   4. porta TCP
-   5. CRC Ethernet
+   1. [ ] header di livello 2
+   2. [ ] MAC address
+   3. [ ] trailer di livello 2
+   4. [ ] porta TCP
+   5. [ ] CRC Ethernet
 3. Calcolo efficiente di  $a^b\  mod \ q$ mediante il metodo iterativo
 4. Definire la resistenza alle collisioni per le funzioni di hash, e discuterne le conseguenze per la sicurezza della firma elettronica
 5. Descrivere il NAT, il NAPT, e le loro implicazioni per la sicurezza
@@ -20,17 +20,17 @@
 ## 2013-09-02
 
 1. La certificazione ISO 27001 riguarda:
-   1. un information security management system
-   2. la sicurezza perimetralee in particolare i firewall
-   3. l’autenticazione mediante certificati di chiave pubblica
-   4. i certificati rilasciati da una certification authorityaccreditata
-   5. la firma grafometrica
+   1. [ ] un information security management system
+   2. [ ] la sicurezza perimetralee in particolare i firewall
+   3. [ ] l’autenticazione mediante certificati di chiave pubblica
+   4. [ ] i certificati rilasciati da una certification authorityaccreditata
+   5. [ ] la firma grafometrica
 2. Un Proxy HTTP non trasparente:
-   1. svolge tutte le funzioni richieste ad un Firewall
-   2. svolge le stesse funzioni di un NAT
-   3. svolge le stesse funzioni di un NAPT
-   4. sostiene 2 connessioni TCP, una aperta dal client e una aperta verso il server
-   5. inoltra al server HTTP la richiesta del client, con lo stesso indirizzo IP sorgente
+   1. [ ] svolge tutte le funzioni richieste ad un Firewall
+   2. [ ] svolge le stesse funzioni di un NAT
+   3. [ ] svolge le stesse funzioni di un NAPT
+   4. [ ] sostiene 2 connessioni TCP, una aperta dal client e una aperta verso il server
+   5. [ ] inoltra al server HTTP la richiesta del client, con lo stesso indirizzo IP sorgente
 3. Test di primalità di Miller-Rabin
 4. Dimostrare che, se $M$ è primo e $x^2\ mod\ M = 1$, allora $x = 1$ oppure $x = M-1$
 5. Perché su un packet filter vengono normalmente filtrati i pacchetti IP con l’opzione di source routing?
@@ -39,17 +39,17 @@
 ## 2013-09-18
 
 1. Un MAC (message authentication code)
-   1. Autentica un utente
-   2. Autentica un messaggio con una chiave simmetrica
-   3. Autentica un messaggio con una chiave asimmetrica
-   4. Autentica un messaggio mediante un protocollo di challenge-response
-   5. Rende un messaggio non disconoscibile
+   1. [ ] Autentica un utente
+   2. [x] Autentica un messaggio con una chiave simmetrica
+   3. [ ] Autentica un messaggio con una chiave asimmetrica
+   4. [ ] Autentica un messaggio mediante un protocollo di challenge-response
+   5. [ ] Rende un messaggio non disconoscibile
 2. Il cosiddetto ARP poisoning:
-   1. distribuisce un virus su rete locale
-   2. distribuisce un virus su rete geografica
-   3. provoca una errata associazione tra indirizzi DNS e indirizzi IP
-   4. provoca una errata associazione tra indirizzi MAC  e indirizzi IP
-   5. provoca una errata associazione tra URL http e indirizzi IP
+   1. [ ] distribuisce un virus su rete locale
+   2. [ ] distribuisce un virus su rete geografica
+   3. [ ] provoca una errata associazione tra indirizzi DNS e indirizzi IP
+   4. [x] provoca una errata associazione tra indirizzi MAC  e indirizzi IP
+   5. [ ] provoca una errata associazione tra URL http e indirizzi IP
 3. Definizione di radice primitiva di un numero $q$ e metodo per generarne una
 4. Dimostrare che $ab\ mod\ M = (a\ mod\ M)(b\ mod\ M)\ mod\ M$
 5. Disegnare una topologia di rete locale con firewall in HA (high availability)
@@ -59,17 +59,17 @@
 
 1. Descrivere l’attacco DOS basato su ICMP, noto come ‘smurf attack'
 2. Un certificato di chiave pubblica serve per:
-   1. garantire la sicurezza di un firewall
-   2. certificare che un firewall usa correttamente le firme elettroniche
-   3. garantire con una chiave pubblica le ACL di un firewall
-   4. associare in modo certo un soggetto ad una chiave pubblica
-   5. associare in modo certo una chiave pubblica a una chiave privata
+   1. [ ] garantire la sicurezza di un firewall
+   2. [ ] certificare che un firewall usa correttamente le firme elettroniche
+   3. [ ] garantire con una chiave pubblica le ACL di un firewall
+   4. [ ] associare in modo certo un soggetto ad una chiave pubblica
+   5. [ ] associare in modo certo una chiave pubblica a una chiave privata
 3. L’attacco noto come XSS (cross site scripting)
-   1.  permette di eseguire codice sul server attaccato
-   2.  permette di eseguire codice sul browser della vittima
-   3.  permette di eseguire codice sia sul browser della vittima che sul server attaccato
-   4.   usa le credenziali attive sul browser per bloccare il funzionamento del server attaccato
-   5.   usa le credenziali di accesso ad un sito per aprire una pagina protetta su un altro sito
+   1. [ ] permette di eseguire codice sul server attaccato
+   2. [ ] permette di eseguire codice sul browser della vittima
+   3. [ ] permette di eseguire codice sia sul browser della vittima che sul server attaccato
+   4. [ ] usa le credenziali attive sul browser per bloccare il funzionamento del server attaccato
+   5. [ ] usa le credenziali di accesso ad un sito per aprire una pagina protetta su un altro sito
 4. Nello standard ISO 27001, che cos’è lo “statement of applicability”
 5. Dimostrare che, se $N=pq$ e $p$ e $q$ sono primi, allora $Phi(N)=(p-1)(q-1)$, dove $Phi$ è la funzione di Eulero
 6. Discutere l’interazione tra NAT e reti private virtuali
@@ -87,7 +87,7 @@
    2. [ ] sostituisce ad ogni coppia di lettere del testo in chiaro un’altra coppia di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    3. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare una sola volta man mano che si procede nello scorrimento del testo stesso
    4. [ ] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
-   5. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che non può mai cambiare man mano che si procede nello scorrimento del testo stesso
+   5. [x] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che non può mai cambiare man mano che si procede nello scorrimento del testo stesso
 4. Definire che cos’è una funzione di hash resistente alle collisioni
 5. Differenza tra un packet filter e un firewall applicativo
 6. Algoritmo per calcolare l’inverso moltiplicativo in aritmetica modulo n
@@ -205,7 +205,7 @@
    1. [ ] realizza un buffer overflow sul server ARP
    2. [ ] realizza un buffer overflow sul firewall
    3. [ ] invia una risposta ARP con indirizzi IP modificati
-   4. [ ] invia una risposta ARP con indirizzi MAC modificati
+   4. [x] invia una risposta ARP con indirizzi MAC modificati
    5. [ ] invia una risposta ARP causando un buffer overflow
 3. Il Syn flooding
    1. [ ] è un attacco di buffer overflow
@@ -220,17 +220,17 @@
 ## 2016-09-19
 1.  Descrivere un metodo percalcolare la radice primitiva a di un primo q, dimostrarne la correttezza
 2.  Una VPN (virtual private network)
-    1.  separa una LAN in reti virtuali che si comportano come se fossero fisicamente distinte
-    2.  separa una LAN in due o più LAN con indirizzamenti IP distinti
-    3.  separa una LAN in due o più reti virtuali attraverso un proxy
-    4.  è realizzata a livello 2 della pila ISO/OSI
-    5.  è realizzata a livello 3 della pila ISO/OSI
+    1. [ ] separa una LAN in reti virtuali che si comportano come se fossero fisicamente distinte
+    2. [ ] separa una LAN in due o più LAN con indirizzamenti IP distinti
+    3. [ ] separa una LAN in due o più reti virtuali attraverso un proxy
+    4. [ ] è realizzata a livello 2 della pila ISO/OSI
+    5. [ ] è realizzata a livello 3 della pila ISO/OSI
 3. Una funzione di hash resistente alle collisioni
-   1. rende impossibili le collisioni
-   2. rende improbabili le collisioni
-   3. rende computazionalmente difficile la generazione di collisioni
-   4. dato un input produce un codice (hash code) che autentica l’input stesso
-   5. dato un input produce un codice (hash code) che cifra l’input stesso
+   1. [ ] rende impossibili le collisioni
+   2. [ ] rende improbabili le collisioni
+   3. [x] rende computazionalmente difficile la generazione di collisioni
+   4. [ ] dato un input produce un codice (hash code) che autentica l’input stesso
+   5. [ ] dato un input produce un codice (hash code) che cifra l’input stesso
 4. Descrivere il cifrario di Vigenère
 5. Discutere il concetto di IT risk management (gestione del rischio informatico)
 6. Descrivere il funzionamento del NAPT (network address and port translation)e le sue conseguenze per la sicurezza di una rete
@@ -239,17 +239,17 @@
 
 1. Descrivere il concetto di DDOS (distributed denial of service)
 2. Per effettuare un’analisi del rischio secondo la metodologia OWASP, si utilizza la formula:
-   1. Probabilità = $f(gravità\ del\ rischio, vulnerabilità)$
-   2. Gravità del rischio = $f(probabilità,impatto)$
-   3. Probabilità = $f(agente\ della\ minaccia, impatto)$
-   4. Impatto = $f(impatto\ tecnologico, probabilità)$
-   5. Gravità del rischio = $f(impatto\ tecnologico, impatto\ di\ business)$
+   1. [ ] Probabilità = $f(gravità\ del\ rischio, vulnerabilità)$
+   2. [x] Gravità del rischio = $f(probabilità,impatto)$
+   3. [ ] Probabilità = $f(agente\ della\ minaccia, impatto)$
+   4. [ ] Impatto = $f(impatto\ tecnologico, probabilità)$
+   5. [ ] Gravità del rischio = $f(impatto\ tecnologico, impatto\ di\ business)$
 3. In una VPN “tunnel”
-   1. è tutto cifrato, tranne il MAC address
-   2. l’indirizzo IP del solo terminatore sorgente è cifrato
+   1. [ ] è tutto cifrato, tranne il MAC address
+   2. [ ] l’indirizzo IP del solo terminatore sorgente è cifrato
    3. gli indirizzi IP di entrambi i terminatori sono cifrati
-   4. il reale indirizzo IP sorgente è cifrato
-   5. il reale indirizzo IP sorgente è in chiaro
+   4. [ ] il reale indirizzo IP sorgente è cifrato
+   5. [ ] il reale indirizzo IP sorgente è in chiaro
 4. Definire e illustrare graficamente il concetto di  “Merkle Tree”
 5. Spiegare il “bit s” nel controllo di accesso ai sistemi Unix, e perché può essere pericoloso in presenza di vulnerabilità di un eseguibile
 6. Algoritmo iterativo per calcolare in modo efficiente l’esponente modulare e sua complessità
@@ -258,17 +258,17 @@
 
 1. Descrivere il ciclo Plan-Do-Check-Act secondo lo standard ISO-27001
 2. Nel contesto della “Blockchain”:
-   1. In ogni momento una sola blockchain è valida
-   2. In ogni momento sono valide più blockchain che condividono una sottocatena iniziale
-   3. La blockchain è resa valida dalla firma di una terza parte fidata
-   4. La blockchain è resa valida da un voto di maggioranza sulla rete peer to peer
-   5. La blockchain è resa valida da un MAC (message authentication code)
+   1. [ ] In ogni momento una sola blockchain è valida
+   2. [ ] In ogni momento sono valide più blockchain che condividono una sottocatena iniziale
+   3. [ ] La blockchain è resa valida dalla firma di una terza parte fidata
+   4. [ ] La blockchain è resa valida da un voto di maggioranza sulla rete peer to peer
+   5. [ ] La blockchain è resa valida da un MAC (message authentication code)
 3. Un firewall con HA (High Availability):
-   1. È normalmente realizzato in una configurazione con load-balancing
-   2. È normalmente realizzato in una configurazione con DNS round-robin
-   3. È normalmente realizzato in una configurazione con fail-over
-   4. È un firewall application-aware
-   5. È un firewall di tipo packet-filter che evita la perdita di pacchetti
+   1. [ ] È normalmente realizzato in una configurazione con load-balancing
+   2. [ ] È normalmente realizzato in una configurazione con DNS round-robin
+   3. [ ] È normalmente realizzato in una configurazione con fail-over
+   4. [ ] È un firewall application-aware
+   5. [ ] È un firewall di tipo packet-filter che evita la perdita di pacchetti
 4. Definire il metodo di scambio di chiavi di Diffie-Hellman
 5. Discutere, nel metodo di scambio di chiavi di Diffie-Hellman come descritto nella domanda 4, la complessità computazionale di ciascun passo
 6. Descrivere il protocollo ESP (encapsulating security payload) nelle reti private virtuali IPSEC
