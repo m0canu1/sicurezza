@@ -62,11 +62,11 @@
    1. [ ] garantire la sicurezza di un firewall
    2. [ ] certificare che un firewall usa correttamente le firme elettroniche
    3. [ ] garantire con una chiave pubblica le ACL di un firewall
-   4. [ ] associare in modo certo un soggetto ad una chiave pubblica
+   4. [x] associare in modo certo un soggetto ad una chiave pubblica
    5. [ ] associare in modo certo una chiave pubblica a una chiave privata
 3. L’attacco noto come XSS (cross site scripting)
    1. [ ] permette di eseguire codice sul server attaccato
-   2. [ ] permette di eseguire codice sul browser della vittima
+   2. [x] **FORSE** permette di eseguire codice sul browser della vittima
    3. [ ] permette di eseguire codice sia sul browser della vittima che sul server attaccato
    4. [ ] usa le credenziali attive sul browser per bloccare il funzionamento del server attaccato
    5. [ ] usa le credenziali di accesso ad un sito per aprire una pagina protetta su un altro sito
@@ -127,7 +127,7 @@
    2. [ ] permette di intercettare password memorizzate su un database
    3. [ ] permette di  eseguire  codice  dannoso  sia  sul browser della vittima che sul server
    4. [ ] usa  le  credenziali  attive sul browser per eseguire delle operazioni non desiderate
-   5. [ ] può ottenere cookie del browser e utilizzarli successivamente come autenticazione
+   5. [x] può ottenere cookie del browser e utilizzarli successivamente come autenticazione
 4. Descrivere la vulnerabilità OWASP nota come “insecure direct object reference”
 5. Che cos’è una marca temporale (timestamp)?
 6. Consideriamo il cifrario RSA con modulo $n=pq$, esponente privato $d$ ed esponente pubblico $e$.
@@ -146,7 +146,7 @@
 3. Un certificato di chiave pubblica
    1. [ ] contiene la chiave privata in chiaro di una Certification Authority
    2. [ ] contiene la chiave privata cifrata di una Certification Authority
-   3. [ ] contiene una firma della Certification Authority
+   3. [x] **forse** contiene una firma della Certification Authority
    4. [ ] contiene il nome dell’organismo accreditato per la certificazione ISO 27001
    5. [ ] contiene la chiave privata cifrata dell’organismo accreditato per la certificazione ISO 27001
 4. Come funziona un firewall ridondato (anche detto “HA” – high availability)
@@ -279,7 +279,7 @@
 2. Un virus polimorfo:
    1. [ ] Si comporta in modo diverso a seconda del sistema operativo vittima
    2. [ ] Si comporta in modo diverso per applicazioni Web e per sistemi mobile
-   3. [ ] Cambia ad ogni sua “riproduzione”
+   3. [x] **FORSE** Cambia ad ogni sua “riproduzione”
    4. [ ] Cambia ad ogni sua “esecuzione”
    5. [ ] Cambia ad ogni scansione dell’antivirus
 3. Una VPN IPSEC:
