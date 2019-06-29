@@ -36,6 +36,8 @@
 5. Perché su un packet filter vengono normalmente filtrati i pacchetti IP con l’opzione di source routing?
 6. Fare un esempio di Broken Authentication o Session Management (OWASP)
 
+\pagebreak
+
 ## 2013-09-18
 
 1. Un MAC (message authentication code)
@@ -74,6 +76,8 @@
 5. Dimostrare che, se $N=pq$ e $p$ e $q$ sono primi, allora $Phi(N)=(p-1)(q-1)$, dove $Phi$ è la funzione di Eulero
 6. Discutere l’interazione tra NAT e reti private virtuali
 
+\pagebreak
+
 ## 2014-07-11
 1. Descrivere la metodologia di analisi dei rischi definita da OWASP
 2. In IPSEC con AH il MAC autentica
@@ -85,7 +89,7 @@
 3. Un cifrario a sostituzione monoalfabetica
    1. [ ] sostituisce ad ogni singola lettera del testo in chiaro un’altra lettera, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    2. [ ] sostituisce ad ogni coppia di lettere del testo in chiaro un’altra coppia di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
-   3. sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare una sola volta man mano che si procede nello scorrimento del testo stesso
+   3. [ ] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare una sola volta man mano che si procede nello scorrimento del testo stesso
    4. [ ] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    5. [x] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che non può mai cambiare man mano che si procede nello scorrimento del testo stesso
 4. Definire che cos’è una funzione di hash resistente alle collisioni
@@ -112,6 +116,7 @@
     1.  $(ab)\ mod\ M = [(a\ mod\ M)(b\ mod\ M)]\ mod\ M$
     2.  $(ab)\ mod\ M = (a\ mod\ M)\ b\ mod\ M$
 
+\pagebreak
 
 
 ## 2015-07-10
@@ -153,10 +158,12 @@
 5. Che tipo di cifrario implementa una macchina a rotori, e quali sono le sue debolezze?
 6. Fare un esempio concreto di Cross-Site Scripting (XSS)
 
+\pagebreak
+
 ## 2016-06-16
 1. Descrivere il funzionamento di un attacco basato su “Buffer Overflow”
 2. Secondo OWASP, il livello di rischio legato ad una vulnerabilità dipende da:
-   1. [ ] facilità di sfruttarla e impatto del corrispondente attacco
+   1. [X] facilità di sfruttarla e impatto del corrispondente attacco
    2. [ ] facilità di enumerare le password dei corrispondenti utenti (brute force)
    3. [ ] posizione della vulnerabilità nella OWASP top ten
    4. [ ] numero di exploit di quella vulnerabilità / numero di exploit totali
@@ -198,6 +205,8 @@
        }
    Spiegare in concreto come eseguirlo, sfruttando la vulnerabilità della “gets” per forzare l’output “you win”
 
+\pagebreak
+
 ## 2016-09-02
 
 1. Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità
@@ -235,6 +244,8 @@
 5. Discutere il concetto di IT risk management (gestione del rischio informatico)
 6. Descrivere il funzionamento del NAPT (network address and port translation)e le sue conseguenze per la sicurezza di una rete
 
+\pagebreak
+
 ## 2017-06-12
 
 1. Descrivere il concetto di DDOS (distributed denial of service)
@@ -247,7 +258,7 @@
 3. In una VPN “tunnel”
    1. [ ] è tutto cifrato, tranne il MAC address
    2. [ ] l’indirizzo IP del solo terminatore sorgente è cifrato
-   3. gli indirizzi IP di entrambi i terminatori sono cifrati
+   3. [ ] gli indirizzi IP di entrambi i terminatori sono cifrati
    4. [ ] il reale indirizzo IP sorgente è cifrato
    5. [ ] il reale indirizzo IP sorgente è in chiaro
 4. Definire e illustrare graficamente il concetto di  “Merkle Tree”
@@ -266,12 +277,14 @@
 3. Un firewall con HA (High Availability):
    1. [ ] È normalmente realizzato in una configurazione con load-balancing
    2. [ ] È normalmente realizzato in una configurazione con DNS round-robin
-   3. [ ] È normalmente realizzato in una configurazione con fail-over
+   3. [x] È normalmente realizzato in una configurazione con fail-over
    4. [ ] È un firewall application-aware
    5. [ ] È un firewall di tipo packet-filter che evita la perdita di pacchetti
 4. Definire il metodo di scambio di chiavi di Diffie-Hellman
 5. Discutere, nel metodo di scambio di chiavi di Diffie-Hellman come descritto nella domanda 4, la complessità computazionale di ciascun passo
 6. Descrivere il protocollo ESP (encapsulating security payload) nelle reti private virtuali IPSEC
+
+\pagebreak
 
 ## 2017-09-18
 
