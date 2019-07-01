@@ -179,7 +179,8 @@ dischetto
 La **PDU** (Protocol Data Unit) trasportata dal pacchetto IP è:
 - cifrata e/o (simmetricamente) (**ESP** - Encapsulating Security Payload)
 - autenticata (simmetricamente) (**AH** - Authentication Header)
-e all'header vengono aggiunte informazioni che permettono al ricevente autorizzato di:
+
+All'header vengono aggiunte informazioni che permettono al ricevente autorizzato di:
 - decifrare e/o
 - verificare integrità e autenticità
 
@@ -236,12 +237,12 @@ Ricezione pacchetti:
    2. fatta avanzare la finestra e si aggiorna il margine destro all'attuale *Sequence Number* (del pacchetto appena ricevuto)
 3. Se si trova a **sinistra** o **fallisce MAC** viene scartato
 
-1. Determinazione Chiavi e Algoritmo Crittografico?
+4. Determinazione Chiavi e Algoritmo Crittografico?
    - Usando le **SPI**, indirizzo **IP mittente e destinatario** e una **tabella di associazione** presente sulle macchinte di mittente e ricevente
 
-2. Come si installa una tabella di associazione e come si inizializzano le chiavi?
+5. Come si installa una tabella di associazione e come si inizializzano le chiavi?
    - A mano, durante l'installazione di IPSec
-3. Che algoritmi di cifratura e autenticazione vengono usati?
+6. Che algoritmi di cifratura e autenticazione vengono usati?
    - Algoritmi convenzionali (**simmetrici**) perché il procedimento dev'essere efficiente
 
 **CONCLUSIONE** - IPSec:

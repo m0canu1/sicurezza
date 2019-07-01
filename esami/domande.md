@@ -81,7 +81,7 @@
 ## 2014-07-11
 1. Descrivere la metodologia di analisi dei rischi definita da OWASP
 2. In IPSEC con AH il MAC autentica
-   1. [ ] il solo payload
+   1. [x] il solo payload
    2. [ ] il payload e i campi variabili dell’intestazione IP
    3. [ ] il payload e i campi fissi e variabili dell’intestazione IP
    4. [ ] il payload e i campi fissi dell’intestazione IP
@@ -145,7 +145,7 @@
 2. Il numero di moltiplicazioni necessario per cifrare o decifrare con RSA è
    1. [ ] lineare rispetto al modulo
    2. [ ] lineare rispetto al numero di bit del modulo
-   3. [ ] esponenzialerispetto al modulo
+   3. [ ] esponenziale rispetto al modulo
    4. [ ] esponenziale rispetto al numero di bit del modulo
    5. [ ] esponenziale rispetto al numero di bit delle chiavi
 3. Un certificato di chiave pubblica
@@ -183,7 +183,7 @@
 2. La protezione da memory corruption nota come “canarino”:
    1. [ ] viene realizzata dal sistema operativo
    2. [ ] viene realizzata dal layer IPC
-   3. [ ] viene realizzata dal compilatore
+   3. [x] viene realizzata dal compilatore
    4. [ ] viene realizzata dal programmatore
    5. [ ] non è realizzabile in pratica
 3. Il NAPT (network address and port translation)
@@ -228,7 +228,7 @@
 
 ## 2016-09-19
 1.  Descrivere un metodo percalcolare la radice primitiva a di un primo q, dimostrarne la correttezza
-2.  Una VPN (virtual private network)
+2.  Una VPN (Virtual Private Network)
     1. [x] separa una LAN in reti virtuali che si comportano come se fossero fisicamente distinte
     2. [ ] separa una LAN in due o più LAN con indirizzamenti IP distinti
     3. [ ] separa una LAN in due o più reti virtuali attraverso un proxy
@@ -241,8 +241,8 @@
    4. [ ] dato un input produce un codice (hash code) che autentica l’input stesso
    5. [ ] dato un input produce un codice (hash code) che cifra l’input stesso
 4. Descrivere il cifrario di Vigenère
-5. Discutere il concetto di IT risk management (gestione del rischio informatico)
-6. Descrivere il funzionamento del NAPT (network address and port translation)e le sue conseguenze per la sicurezza di una rete
+5. Discutere il concetto di IT Risk Management (gestione del rischio informatico)
+6. Descrivere il funzionamento del NAPT (network address and port translation) e le sue conseguenze per la sicurezza di una rete
 
 \pagebreak
 
