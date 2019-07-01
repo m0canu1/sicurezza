@@ -243,3 +243,68 @@ Ricezione pacchetti:
 2. Permette anche traffico da e verso reti esterne (attraverso Firewall se necessario)
 3. Non introduce ritardi significativi
 4. Non richiede operazioni di riconfigurazione agli utenti (trasparenza) **se installato in TUNNEL MODE**
+
+\pagebreak
+
+# PRIVATENET SECURITY
+
+Problemi su una LAN:
+- Intrusioni di utenti non autorizzati. 
+  **SI EVITA:**
+   - Controlli di accesso su ogni calcolatore
+   - Firewall (filtro pacchetti e/o proxy)
+   - Limitare o evitare collegamenti esterni
+   - Logging di sessioni interne/esterne a analisi manuale
+   - Programmi di rilevamento delle intrusioni (intrusion detection)
+- Virus e altri programmi critici per la sicurezza. 
+  **SI EVITA:**
+  - Proibire installazione di software da parte dell'utente
+  - Antivirus
+  - Inserire filtro antivirus sul firewall
+  - Mantenere backup sistematico (eventuale disaster recovery)
+- Sniffing - lettura pacchetti su rete
+  - Possibile su LAN aziendale
+  - Possibile su rete locale da dove su collega un utente autorizzato
+  - Difficile con switch, ma possibile
+  - Possibile, ma non comune, su rete geografica
+  - **SI EVITA (su LAN):**
+    - usando reti con Switch
+    - Cifrare a livello applicativo
+    - Cifrare a livello di trasporto
+    - Cifrare a livello IP su ogni calcolatore
+    - Routing livello 2, ARP **statico**, DHCP **statico**, rilevamento indirizzi hardware non validi per indirizzo IP
+  - **SI EVITA (all'esterno):**
+    - Cifrare a livello applicativo
+    - Cifrare a livello di trasporto
+    - Cifrare a livello IP su router o firewall
+    - Impedire collegamento diretto da rete non controllata
+- Spoofing (falsificazione indirizzi) su:
+  - Indirizzi hardware su LAN
+    - Possibile su segmento broadcast della rete locale
+      - per **ricevere** agendo su *ARP* e configurando la scheda di rete in modalità promiscua
+      - per **trasmettere** agendo su certi tipi di schede di rete, cambiano l'indirizzo mittente
+      - Inutile su **rete geografica**
+  - Indirizzi IP
+    - Possibile su LAN anche con TCP
+    - Possibile su rete geografica con UDP
+    - Impossibile su WAN con TCP
+  - Indirizzi simbolici (DNS)
+    - Configurando i calcolatori con l'indicazione di un DNS server che è possibile controllare
+    - Controllando il DNS server normalmente usato sulla LAN
+  - URL (Web Spoofing)
+    - Usando una URL credibile per certi contenuti e controllando il server per quella URL
+    - Utilizzando una URL qualunque e agendo sui link presenti in pagine WEB visitate spesso. Quindi inserendo contenuti arbitrari per la URL che è possibile controllare
+- Spamming, Flooding, DOS
+  - DOS **SI EVITA:**
+    - Difficile evitarlo, in generale
+    - Raro, in generale
+    - Per applicazioni particolari (allarmi, militari, servizi ad alta affidabilità) occorrono reti dedicate
+  - ESEMPI
+    - **SYN FLOODING** 
+      Inizio connessioni TCP a ripetizione verso il calcolatore vittima senza completare l'handshake (possibile con indirizzo IP spoofed, visto che la connessine viene solo iniziata)
+    - **ICMP echo request**
+      Invio di un gran numero di **echo request** verso un calcolatore B (**reflector**), con un indirizzo **IP sorgente falsificato** e uguale a quello della vittima
+      - **smurf attack** dove B è un broadcast di rete o sottorete. Il mittente ha indirizzo IP *spoofed* uguale all'indirizzo della vittima A, che si trova sulla stessa rete o sottorete. 
+    - **Spamming con relay SMTP**
+      Forma particolare di flooding, con uno scopo preciso: **usare mail server altrui per inviare posta in grandi quantità**
+      **SI EVITA** configurando il mail server in modo adeguato.
