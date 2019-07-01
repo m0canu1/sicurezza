@@ -23,13 +23,13 @@
    1. [ ] un information security management system
    2. [ ] la sicurezza perimetrale e in particolare i firewall
    3. [ ] l’autenticazione mediante certificati di chiave pubblica
-   4. [x] **forse** i certificati rilasciati da una certification authority accreditata
+   4. [x] i certificati rilasciati da una certification authority accreditata
    5. [ ] la firma grafometrica
 2. Un Proxy HTTP non trasparente:
    1. [ ] svolge tutte le funzioni richieste ad un Firewall
    2. [ ] svolge le stesse funzioni di un NAT
    3. [ ] svolge le stesse funzioni di un NAPT
-   4. [ ] sostiene 2 connessioni TCP, una aperta dal client e una aperta verso il server
+   4. [x] sostiene 2 connessioni TCP, una aperta dal client e una aperta verso il server
    5. [ ] inoltra al server HTTP la richiesta del client, con lo stesso indirizzo IP sorgente
 3. Test di primalità di Miller-Rabin
 4. Dimostrare che, se $M$ è primo e $x^2\ mod\ M = 1$, allora $x = 1$ oppure $x = M-1$
@@ -190,9 +190,9 @@
    1. [ ] permette di avere un solo indirizzo interno, diverso dall’indirizzo pubblico esterno
    2. [ ] permette di avere più indirizzi interni, purché identici agli indirizzi pubblici esterni
    3. [ ] permette di avere piu’ indirizzi interni, purche’ meno numerosi di quelli esterni
-   4. [ ] permette di avere piu’ indirizzi interni, anche con un solo indirizzo pubblico esterno
+   4. [x] permette di avere piu’ indirizzi interni, anche con un solo indirizzo pubblico esterno
    5. [ ] permette di avere un solo indirizzo interno, e piu’ indirizzi pubblici esterni
-4. Perché una funzione Hash(M) definita come Xor dei blocchi di M non è collision resistant
+4. Perché una funzione Hash(M) definita come $XOR$ dei blocchi di M non è collision resistant
 5. Effetti della frammentazione IP sul comportamento di un firewall di tipo packet filter
 6. Si consideri questo programma C:
    
