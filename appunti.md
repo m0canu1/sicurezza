@@ -62,7 +62,7 @@ Ogni sequenza di $N$ lettere viene sostituita con una sequenza fissata di $N$ le
 
 ## ASIMMETRICI (chiavi diversi per cifratore e decifratore)
 
-/pagebreak
+\pagebreak
 
 # FIREWALL
 
@@ -89,32 +89,36 @@ altamente sicuro esso stesso
 3. Generazione di allarmi
 
 **Tipi di configurazione:**
+
 1. **Screening Router**
    - uso del router per filtrare il traffico sia livello IP che superiore
    - non richiede hardware dedicato
    - non necessita di proxy (quindi di modifiche agli applicativi) 
    - insicuro
+   - 
 2. **Dual-homed gateway**
    - Facile realizzazione
    - richiede poco hardware (il SW firewall su PC o Calcolatore Custom0)
    - possibile mascherare la rete interna
    - scarsamente flessibile
    - grosso sovraccarico di lavoro
-   ![image006](/assets/image006.gif)
+  ![dual-homed gateway](assets/image006.gif)
+
 3. **Screened host gateway**
    - servizi forniti da un calcolatre (bastion host) con funzione di application gateway
    - separazione della rete interna viene realizzata dal router
    - router filtra i pacchetti in maniera tale che solo il bastion host possa aprire connessioni con la rete esterna.
    - tutti i sistemi esterni che desiderino collegarsi con la rete privata possono connettersi solo con il bastion host
    - Eccezioni: protocolli abilitati direttamente
-   ![image007](/assets/image007.gif)
+  ![screened gateway](assets/image007.gif)
+
 4. **Screened subnet**
    - firewall viene realizzato utilizzando due router che creano una rete, compresa tra loro, detta rete perimetrale, su cui si trovano le macchine (bastion host) 
    - **bastion host** forniscono i servizi (ad esempio l’application gateway e il server di posta elettronica) 
    - router esterno filtra il traffico tra Internet e la rete perimetrale (in accordo con la politica di accesso ai servizi stabilita per la rete)
    - il router interno protegge la rete privata sia da Internet che della rete perimetrale consentendo esclusivamente il transito di pacchetti da e verso i bastion host. 
    - E’ possibile configurare i due router in maniera tale da consentire il transito di traffico che si considera fidato tra Internet e la rete interna senza la mediazione di application gateway
-  ![image008](/assets/image008.gif)
+  ![screened subnet](assets/image008.gif)
 
   **Tipi di configurazione:**
   1. **Packet Filter**
@@ -128,7 +132,8 @@ altamente sicuro esso stesso
       - Difficile monitorare attacchi mentre avvengono
       Un **problema** importante nella configurazione di un  firewall riguarda la **frammentazione IP**. Infatti  se un pacchetto viene frammentato in pezzi molto  piccoli, ogni parte può essere tanto ridotta da  non includere neanche l'header TCP e quindi la  porta utilizzata nel firewall per filtrare.    Questo succede per frammenti di poco più di 20  byte, che sono comunque ingiustificati rispetto  a qualsiasi MTU. Tali frammenti corti devono quindi essere tagliati.
 
-      Un'altra regola importante e' bloccare tutti i pacchetti con l'opzione di **source routing** perche' **permette IP spoofing** con TCP su WAN.
+Un'altra regola importante e' bloccare tutti i pacchetti con l'opzione di **source routing** perche' **permette IP spoofing** con TCP su WAN.
+
   2. **Application Proxy**
       - Connessioni dirette tra interno ed esterno sono **proibite** 
       - Possibili solo connessioni attraverso il firewall
@@ -158,3 +163,83 @@ dischetto
 **NAPT** (Networkd Adrress & Port Translation)
 
 ![natnapt](assets/figure_7-4.png)
+
+\pagebreak
+
+# VPN (Virtual Private Network)
+
+## **IPSec** (IP Level Security)
+La **PDU** (Protocol Data Unit) trasportata dal pacchetto IP è:
+- cifrata e/o (simmetricamente) (**ESP** - Encapsulating Security Payload)
+- autenticata (simmetricamente) (**AH** - Authentication Header)
+e all'header vengono aggiunte informazioni che permettono al ricevente autorizzato di:
+- decifrare e/o
+- verificare integrità e autenticità
+
+**Conseguenze:**
+- Router vedono: indirizzo mittente e destinatario (come appaiono nell'header IP)
+- Router non vedono PDU se cifrata
+- Router non possono modificare i messaggi se autenticati (il ricevente se ne accorge)
+- Reti aziendali protette da intercettazioni e modifiche su internet
+- Cifratura e autenticazione gestite solo sulle LAN sorgente e destinazione
+- IPSec non protegge da attacchi all'interno delle LAN private e servizi verso l'esterno (quelli senza cifratura/autenticazione a livello IP)
+
+**Transport mode**
+  Cifratura e autenticazione su **computer** mittente e destinatario
+  - Protegge da Sniffing/Spoofing su rete locale
+  - Rende visibili su internet indirizzi mittente e destinatario
+  - Richiede speciale configurazione del computer utente (non trasparente)
+  - Necessario per traffico da postazione mobile
+**Tunnel mode**
+  Cifratura e autenticazione su **firewall** o **router**
+  - **Non protegge** da Sniffing/Spoofing su rete locale
+  - Nasconde gli indirizzi dei singoli computer (mittente e destinatario) ma non gli indirizzi della rete mittente e destinataria
+  - È trasparente all'utente singolo
+  - Veloce, prodotti affidabili per router/firewall
+
+**AH** (Authentication Header)
+Serve per **autenticare** (**non** per nascondere indirizzi IP o evitare intercettazioni) il traffico IP, normalmente tra due LAN private per evitare modifiche o falsificazioni. Campi:
+- Next Header ($8$) - Identifica il protocollo superiore in IPv4 (next header in IPv6)
+- Length ($8$) - utile perché la lunghezza di Data varia a seconda dello SPI
+- Reserved ($16$)
+- SPI ($32$, Security Parameters Index) - Identifica un indice dell'algoritmo e delle chiavi crittografiche
+- Data ($N \times 32$) - codici di autenticazione (MAC - Message Authentication Code) riferiti a tutto il pacchetto, ma dove i campi variabili (TTL, checksum) sono uguali a $0$
+
+**ESP** (Encapsulating Security Payload)
+Serve per **cifrare** il traffico e per **evitare intercettazioni**.
+
+![](assets/8.vpn-28.png)
+![](assets/8.vpn-29.png)
+
+**IPSec anti-replay**
+
+Allo stabilire di una nuova **SA** (Associazione di Sicurezza):
+- Il **mittente** inizializza un contatore a 0 che incrementa ad ogni invio di un pacchetto (durante l'attuale SA).
+Il numero massimo a cui arriva il contatore è $2^{32}-1$ e **non deve ricominciare**. Quando raggiunge il limite si crea una **nuova SA**.
+
+- Il **Ricevitore** implementa una finestra $W$ (tipicamente $W=64$) con $N$ margine destro (contiene 00il numero, sequenziale, più elevato dei pacchetti ricevuti)
+
+Ricezione pacchetti:
+
+1. È nuovo e rientra nella finestra:
+   1. controllo MAC
+   2. si contrassegna la posizione
+2. È nuovo e si trova a **destra** della $W$:
+   1. controllo MAC
+   2. fatta avanzare la finestra e si aggiorna il margine destro all'attuale *Sequence Number* (del pacchetto appena ricevuto)
+3. Se si trova a **sinistra** o **fallisce MAC** viene scartato
+
+1. Determinazione Chiavi e Algoritmo Crittografico?
+   - Usando le **SPI**, indirizzo **IP mittente e destinatario** e una **tabella di associazione** presente sulle macchinte di mittente e ricevente
+
+2. Come si installa una tabella di associazione e come si inizializzano le chiavi?
+   - A mano, durante l'installazione di IPSec
+3. Che algoritmi di cifratura e autenticazione vengono usati?
+   - Algoritmi convenzionali (**simmetrici**) perché il procedimento dev'essere efficiente
+
+**CONCLUSIONE** - IPSec:
+
+1. Permette di avere la stessa sicurezza che avremmo con un'unica rete locale (VPN)
+2. Permette anche traffico da e verso reti esterne (attraverso Firewall se necessario)
+3. Non introduce ritardi significativi
+4. Non richiede operazioni di riconfigurazione agli utenti (trasparenza) **se installato in TUNNEL MODE**

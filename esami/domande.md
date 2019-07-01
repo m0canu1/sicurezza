@@ -20,10 +20,10 @@
 ## 2013-09-02
 
 1. La certificazione ISO 27001 riguarda:
-   1. [ ] un information security management system
+   1. [x] un information security management system
    2. [ ] la sicurezza perimetrale e in particolare i firewall
    3. [ ] l’autenticazione mediante certificati di chiave pubblica
-   4. [x] i certificati rilasciati da una certification authority accreditata
+   4. [ ] i certificati rilasciati da una certification authority accreditata
    5. [ ] la firma grafometrica
 2. Un Proxy HTTP non trasparente:
    1. [ ] svolge tutte le funzioni richieste ad un Firewall
