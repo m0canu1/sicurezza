@@ -77,7 +77,7 @@ può attraversare il FW
 - il FW deve essere un sistema
 altamente sicuro esso stesso
 
-**Funzionalita:**
+**Funzionalità:**
 
 1. Filtri sulla base di:
    - Destinazione
@@ -87,6 +87,12 @@ altamente sicuro esso stesso
    - traffico complessivo
    - azioni dei singoli utenti
 3. Generazione di allarmi
+
+![screened subnet](assets/image008.gif)
+
+![dual-homed gateway](assets/image006.gif)
+
+![screened gateway](assets/image007.gif)
 
 **Tipi di configurazione:**
 
@@ -102,7 +108,7 @@ altamente sicuro esso stesso
    - possibile mascherare la rete interna
    - scarsamente flessibile
    - grosso sovraccarico di lavoro
-  ![dual-homed gateway](assets/image006.gif)
+  
 
 3. **Screened host gateway**
    - servizi forniti da un calcolatre (bastion host) con funzione di application gateway
@@ -110,7 +116,7 @@ altamente sicuro esso stesso
    - router filtra i pacchetti in maniera tale che solo il bastion host possa aprire connessioni con la rete esterna.
    - tutti i sistemi esterni che desiderino collegarsi con la rete privata possono connettersi solo con il bastion host
    - Eccezioni: protocolli abilitati direttamente
-  ![screened gateway](assets/image007.gif)
+
 
 4. **Screened subnet**
    - firewall viene realizzato utilizzando due router che creano una rete, compresa tra loro, detta rete perimetrale, su cui si trovano le macchine (bastion host) 
@@ -118,10 +124,11 @@ altamente sicuro esso stesso
    - router esterno filtra il traffico tra Internet e la rete perimetrale (in accordo con la politica di accesso ai servizi stabilita per la rete)
    - il router interno protegge la rete privata sia da Internet che della rete perimetrale consentendo esclusivamente il transito di pacchetti da e verso i bastion host. 
    - E’ possibile configurare i due router in maniera tale da consentire il transito di traffico che si considera fidato tra Internet e la rete interna senza la mediazione di application gateway
-  ![screened subnet](assets/image008.gif)
+  
 
   **Tipi di configurazione:**
-  1. **Packet Filter**
+
+  1. **Packet Filter:**
       - Filtra in base a:
         - Direzione del pacchetto
         - Direzione della connessione
@@ -134,7 +141,7 @@ altamente sicuro esso stesso
 
 Un'altra regola importante e' bloccare tutti i pacchetti con l'opzione di **source routing** perche' **permette IP spoofing** con TCP su WAN.
 
-  2. **Application Proxy**
+  1. **Application Proxy**
       - Connessioni dirette tra interno ed esterno sono **proibite** 
       - Possibili solo connessioni attraverso il firewall
       - Ogni servizio dev'essere configurato
