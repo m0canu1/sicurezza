@@ -21,9 +21,9 @@
 
 1. La certificazione ISO 27001 riguarda:
    1. [ ] un information security management system
-   2. [ ] la sicurezza perimetralee in particolare i firewall
+   2. [ ] la sicurezza perimetrale e in particolare i firewall
    3. [ ] l’autenticazione mediante certificati di chiave pubblica
-   4. [ ] i certificati rilasciati da una certification authorityaccreditata
+   4. [x] **forse** i certificati rilasciati da una certification authority accreditata
    5. [ ] la firma grafometrica
 2. Un Proxy HTTP non trasparente:
    1. [ ] svolge tutte le funzioni richieste ad un Firewall
@@ -82,10 +82,10 @@
 1. Descrivere la metodologia di analisi dei rischi definita da OWASP
 2. In IPSEC con AH il MAC autentica
    1. [ ] il solo payload
-   2. [ ] il payload e i campi variabili dell’intestazioneIP
+   2. [ ] il payload e i campi variabili dell’intestazione IP
    3. [ ] il payload e i campi fissi e variabili dell’intestazione IP
    4. [ ] il payload e i campi fissi dell’intestazione IP
-   5. [ ] i soli campi variabili dell’intestazione  IPU
+   5. [ ] i soli campi variabili dell’intestazione  IP
 3. Un cifrario a sostituzione monoalfabetica
    1. [ ] sostituisce ad ogni singola lettera del testo in chiaro un’altra lettera, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
    2. [ ] sostituisce ad ogni coppia di lettere del testo in chiaro un’altra coppia di lettere, in base ad una sostituzione che può cambiare più volte man mano che si procede nello scorrimento del testo stesso
@@ -229,7 +229,7 @@
 ## 2016-09-19
 1.  Descrivere un metodo percalcolare la radice primitiva a di un primo q, dimostrarne la correttezza
 2.  Una VPN (virtual private network)
-    1. [ ] separa una LAN in reti virtuali che si comportano come se fossero fisicamente distinte
+    1. [x] separa una LAN in reti virtuali che si comportano come se fossero fisicamente distinte
     2. [ ] separa una LAN in due o più LAN con indirizzamenti IP distinti
     3. [ ] separa una LAN in due o più reti virtuali attraverso un proxy
     4. [ ] è realizzata a livello 2 della pila ISO/OSI
@@ -258,7 +258,7 @@
 3. In una VPN “tunnel”
    1. [ ] è tutto cifrato, tranne il MAC address
    2. [ ] l’indirizzo IP del solo terminatore sorgente è cifrato
-   3. [ ] gli indirizzi IP di entrambi i terminatori sono cifrati
+   3. [x] gli indirizzi IP di entrambi i terminatori sono cifrati
    4. [ ] il reale indirizzo IP sorgente è cifrato
    5. [ ] il reale indirizzo IP sorgente è in chiaro
 4. Definire e illustrare graficamente il concetto di  “Merkle Tree”
@@ -292,14 +292,14 @@
 2. Un virus polimorfo:
    1. [ ] Si comporta in modo diverso a seconda del sistema operativo vittima
    2. [ ] Si comporta in modo diverso per applicazioni Web e per sistemi mobile
-   3. [x] **FORSE** Cambia ad ogni sua “riproduzione”
+   3. [x] Cambia ad ogni sua “riproduzione”
    4. [ ] Cambia ad ogni sua “esecuzione”
    5. [ ] Cambia ad ogni scansione dell’antivirus
 3. Una VPN IPSEC:
    1. [ ] Cifra ma non può autenticare
    2. [ ] Autentica ma non può cifrare
    3. [ ] Si situa nella pila ISO-OSI sopra il livello link
-   4. [ ] Si situa nella pila ISO-OSI sopra il livello di rete
+   4. [x] **forse** Si situa nella pila ISO-OSI sopra il livello di rete
    5. [ ] Si situa nella pila ISO-OSI sopra il livello di trasporto
 4. Discutere i limiti di un firewall di tipo packet filter
 5. Spiegare perché il teorema della domanda 5 serve per il calcolo dell’inverso moltiplicativo in RSA
