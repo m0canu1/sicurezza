@@ -94,7 +94,7 @@
    5. [x] sostituisce ad una n-upla di lettere del testo in chiaro un’altra n-upla di lettere, in base ad una sostituzione che non può mai cambiare man mano che si procede nello scorrimento del testo stesso
 4. Definire che cos’è una funzione di hash resistente alle collisioni
 5. Differenza tra un packet filter e un firewall applicativo
-6. Algoritmo per calcolare l’inverso moltiplicativo in aritmetica modulo n
+6. Algoritmo per calcolare l’inverso moltiplicativo in aritmetica modulo $n$
 
 ## 2015-06-25
 1. Descrivere il formato dello Authentication Header Ipsec (AH) e commentare il significato e l’utilizzo di ogni campo

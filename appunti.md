@@ -386,3 +386,41 @@ Può esserci, però, il **double spending** con cui un utente, paga doppiamente
 - Bitcoins = dati firmati
 - Payments = transazioni firmate
 - Per prevenire la doppia-spesa è stata introdotta un'autorità centrale, che è anche responsabile dell'emissione di nuova moneta
+
+\pagebreak
+
+# Risk Management
+
+## OWASP
+
+### TOP 10
+
+1. **Injection**
+   L'Injection (SQL, OS, LDAP) avviene quando dei dati non attendibili vengono mandati ad un interprete come *comando* o *query*. Questi dati possono ingannare l'interprete per fargli eseguire azioni non desiderate o riuscire ad accedere ad informazioni senza averne l'autorizzazione.
+
+2. **Broken Authentication and Session Management**
+   Riguarda le applicazioni con funzioni relative all'autenticazione o session management che, spesso, sono malconfigurate consentendo agli aggressori di compromettere password, chiavi, token di sessione o sfruttare altre vulnerabilità per assumere l'identità di altri utenti.
+
+3. **Cross-Site Scripting (XSS)**
+   Vulnerabilità di tipo XSS avvengono quando un'applicazione prende dei dati non attendibili e li manda ad un web browser senza un'adeguata validazione. XSS consente agli attaccanti di eseguire degli **script** sul web browser della vittima che possono reindirizzare l'utente verso siti malevoli, cambiare il sito web visitato dall'utente o rubare i dati di sessione e utilizzarli.
+
+4. **Insecure Direct Object References**
+   Questo accade quando uno sviluppatore **epone** un riferimento ad un oggetto di un'implementazione interna (file, directory, database key), senza controllarne l'accesso o senza alcuna protezione, consentendo agli aggressori di manipolare questi riferimenti per accedere a dati non autorizzati.
+
+5. **Security Misconfiguration**
+   Malconfigurazioni della sicurezza riguardano le impostazioni di sicurezza (di app, framework, web server, database, ecc.) che non sono definite, implementate o costantemente aggiornate. Ma anche il software non aggiornato può dar luogo a problematiche di questo genere.
+
+6. **Sensitive Data Exposure**
+   L'esposizione di dati sensibili come dati della carta di credito, credenziali che possono essere rubate dagli aggressori e conducono a furti d'identità, frodi. Questi dati sensibili meritano un'attenzione maggiore e un'adeguata protezione come la crittografia, specialmente quando sono scambiati tramite web browser.
+
+7. **Missing Function Level Access Control**
+   Most web applications verify function level access rights before making that functionality visible in the UI. However, applications need to perform the same access control checks on the server when each function is accessed. If requests are not verified, attackers will be able to forge requests in order to access functionality without proper authorization.
+
+8. **Cross-Site Request Forgery (CSRF)**
+   A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim.
+
+9.  **Using Components with Known Vulnerabilities**
+   Components, such as libraries, frameworks, and other software modules, almost always run with full privileges. If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover. Applications using components with known vulnerabilities may undermine application defenses and enable a range of possible attacks and impacts.
+   
+11. **Unvalidated Redirects and Forwards**
+    Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pag
