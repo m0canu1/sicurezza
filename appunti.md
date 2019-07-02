@@ -316,3 +316,55 @@ Problemi su una LAN:
     - **Spamming con relay SMTP**
       Forma particolare di flooding, con uno scopo preciso: **usare mail server altrui per inviare posta in grandi quantità**
       **SI EVITA** configurando il mail server in modo adeguato.
+
+\pagebreak
+
+# BITCOIN
+
+### One-way hash functions
+
+Vengono usate le *funzioni hash* **collision-resistant** (One-Way). Cioè dal Valore $V$ determinato tramite la funzione di Hash $H$ applicata all'Informazione $I$, non è possibile risalire al contrario nella catena.
+
+- $H(I)=V$
+  $I \to H \to V$, ma **impossibile** (computazionalmente) il contrario.
+
+Se $|V| = k$ sufficientemente grande un attacco ti **forza bruta** richiederebbe **$2^k$ computazioni**.
+
+
+### Hash pointers & Hash chains
+
+**Hash Pointer** è un **puntatore** a dove l'informazione è salvata. Insieme al puntatore salviamo l'**hash** di quell'informazione.
+
+Con un *hash pointer* possiamo ricevere l'informazione e con il codice *hash* verifichiamo che l'informazione **non** sia cambiata, altrimenti l'*hash pointer* non sarà più valido.
+
+Con gli *hash pointers* possiamo creare strutture dati come **Hash Chains**, **Merkle Tree** (Binary Tree con HASH), **Hash Tables**, ecc.
+
+**Hash Chain** è una catena in cui ogni elemento **punta al suo predecessore**.
+Ogni cambiamento dei dati causa un **invalid HASH Pointer** nell'elemento **successore**.
+L'**HASH Chain** può essere usata per i **tamper-evident log** (tamper = manomettere).
+
+Siccome la **manomissione** è impossibile, si potrebbe pensare di creare una **nuova catena**. 
+Per evitare ciò si usa una **Signed Chain** in cui l'**hash pointer** è firmato:
+ - dalla **$K^-$ (Chiave Privata)** 
+ - e la sua validità è *verificata* tramite **$K^+$ (Chiave Pubblica)**.
+
+### Public keys as identities ("addresses")
+
+Per generare un'identità:
+1. Si genera una coppia di chiavi <$K^+, K^-$>
+2. Si pubblica $K^+$ o $H(K^+)$ in modo appropriato
+3. Si inizia usando $K^-$ per firmare ogni informazione desiderata.
+
+Osservazioni:
+- Chiunque può generare quante identità desidera
+- Nessun certificato, non necessita di terze parti
+- Le identità definite come **chiavi pubbliche** possono essere anonime (chiamate **"addresses"** nel gergo bitcoin).
+
+### Simple Bitcoin scenario
+
+#### Bitcoins as signed data
+
+Una nuova moneta generata dal valore $X$ è firmata da $C$ con la sua firma $K^-$ e la sua identità è verificata con la chiave pubblica $K^+$
+
+#### A simple, non-secure scenario
+#### A centrally managed currency
