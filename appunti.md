@@ -364,7 +364,25 @@ Osservazioni:
 
 #### Bitcoins as signed data
 
-Una nuova moneta generata dal valore $X$ è firmata da $C$ con la sua firma $K^-$ e la sua identità è verificata con la chiave pubblica $K^+$
+Una nuova moneta generata dal valore $X$ è firmata da $C$ con la sua firma $K^-$ e la sua identità è verificata con la chiave pubblica $K^+$.
 
 #### A simple, non-secure scenario
+
+- Chiunque potrebbe generare una qualche moneta di un qualche valore
+- La moneta è usata per pagare qualcuno firmando (con $K^-$) la transazione
+- Il ricevente può usarla, a sua volta, per pagare qualcun altro
+
+Può esserci, però, il **double spending** con cui un utente, paga doppiamente
+# inserire immagine
+
 #### A centrally managed currency
+
+- La catena della transazioni è firmata da un'autorità centrale
+- L'autorità centrale può essere la stessa (identità) che genera nuova moneta
+- Tutti devono fidarsi di essa
+
+
+### Conclusioni
+- Bitcoins = dati firmati
+- Payments = transazioni firmate
+- Per prevenire la doppia-spesa è stata introdotta un'autorità centrale, che è anche responsabile dell'emissione di nuova moneta

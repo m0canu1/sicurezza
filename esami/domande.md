@@ -7,7 +7,7 @@
    4. [x] un Organismo di Certificazione Accreditato da Accredia
    5. [ ] una Autorità di Certificazione abilitata dall’Agenzia per l’Italia Digitale
 2. In IPSEC vengono cifrate le seguenti informazioni:
-   1. [ ] header di livello 2
+   1. [x] **forse** header di livello 2
    2. [ ] MAC address
    3. [ ] trailer di livello 2
    4. [ ] porta TCP
@@ -108,7 +108,7 @@
    1. [ ] permette di eseguire codice dannoso sul server web attaccato
    2. [ ] permette di eseguire codice dannoso sul browser  della vittima
    3. [ ] permette di eseguire codice dannoso sia sul browser della vittima che sul server
-   4. [ ] usa le credenziali attive sul browser per eseguire delle operazioni non desiderate
+   4. [x] usa le credenziali attive sul browser per eseguire delle operazioni non desiderate
    5. [ ] intercetta i cookie presenti sul browser per utilizzarli successivamente come autenticazione
 4.  Nello standard ISO 27001, che cosa sono i “controlli” e in base a quali criteri vengono selezionati?
 5.  Per quale motivo il one-time pad è più sicuro di un cifrario di Vernam con una chiave di lunghezza fissa? 
@@ -123,7 +123,7 @@
 1.  Descrivere la funzione di hash SHA-1
 2.  Il metodo di scambio chiavi di Diffie-Hellman
     1. [ ] si  basa su particolari attacchi di tipo man in the middle
-    2. [ ] si  basa  sulla difficoltà di calcolare il  logaritmo discreto
+    2. [x] si  basa  sulla difficoltà di calcolare il  logaritmo discreto
     3. [ ] si basa sulla difficoltà di fattorizzare rapidamente un grande numero primo
     4. [ ] si basa sulla difficoltà di fattorizzare il prodotto didue grandi  numeri primi
     5. [ ] si basa sulla difficoltà di calcolare l’esponente modulare
@@ -272,7 +272,7 @@
    1. [ ] In ogni momento una sola blockchain è valida
    2. [ ] In ogni momento sono valide più blockchain che condividono una sottocatena iniziale
    3. [ ] La blockchain è resa valida dalla firma di una terza parte fidata
-   4. [ ] La blockchain è resa valida da un voto di maggioranza sulla rete peer to peer
+   4. [x] La blockchain è resa valida da un voto di maggioranza sulla rete peer to peer
    5. [ ] La blockchain è resa valida da un MAC (message authentication code)
 3. Un firewall con HA (High Availability):
    1. [ ] È normalmente realizzato in una configurazione con load-balancing
