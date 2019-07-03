@@ -421,7 +421,9 @@ Può esserci, però, il **double spending** con cui un utente, paga doppiamente
     Un attaccante fa in modo che un utente vittima invii involontariamente una richiesta HTTP dal suo browser al sistema web dove è attualmente autenticato. Il sistema, vulnerabile al CSRF, avendo la certezza che la richiesta provenga dall'utente già precedentemente autenticato la esegue senza sapere che in realtà dietro la richiesta si cela un'azione pensata dall'attaccante come ad esempio un trasferimento di fondi, un acquisto di un oggetto, una richiesta di dati o qualsiasi altra funzione offerta dall'applicazione vulnerabile. 
 
 9.  **Using Components with Known Vulnerabilities**
-   Components, such as libraries, frameworks, and other software modules, almost always run with full privileges. If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover. Applications using components with known vulnerabilities may undermine application defenses and enable a range of possible attacks and impacts.
+   Riguarda Componenti (come librerie, framework, software) che spesso sono eseguiti con privilegi alti.
+   Se vengono utilizzati componenti notoriamente vulnerabili, un aggressore può sfuttare queste vulnerabilità per diverse azioni malintezionate in modo molto più facilitato.
    
-11. **Unvalidated Redirects and Forwards**
-    Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pag
+10. **Unvalidated Redirects and Forwards**
+    Le web application spesso reindirizzano gli utenti verso altre pagine o siti web, usando dati non affidabili per determinarne l'indirizzo.
+    Senza un'adeguata validazione, gli aggressori possono reindirizzare gli utenti verso siti contenenti malware o sistemi di phishing oppure possono utilizzare il reindirizzamento per accedere a pagine senza autorizzazione.
