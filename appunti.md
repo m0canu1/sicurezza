@@ -141,7 +141,7 @@ altamente sicuro esso stesso
 
 Un'altra regola importante e' bloccare tutti i pacchetti con l'opzione di **source routing** perche' **permette IP spoofing** con TCP su WAN.
 
-  1. **Application Proxy**
+  2. **Application Proxy**
       - Connessioni dirette tra interno ed esterno sono **proibite** 
       - Possibili solo connessioni attraverso il firewall
       - Ogni servizio dev'essere configurato
@@ -391,7 +391,14 @@ Può esserci, però, il **double spending** con cui un utente, paga doppiamente
 
 # Risk Management
 
-## OWASP
+Parametri su cui si valuta **il rischio informatico**:
+- **Perimetro**
+- **Probabilità dell'evento**
+- **Impatto**
+
+## ISO 27001
+
+## OWASP 
 
 ### TOP 10
 
