@@ -13,6 +13,14 @@
    4. [ ] porta TCP
    5. [ ] CRC Ethernet
 3. Calcolo efficiente di  $a^b\  mod \ q$ mediante il metodo iterativo
+   $b = b_k...b_2b_1b_0$
+
+        for (i = k; i ≥ 0; i--) {
+            if (b[i] == 1)
+                d = (d*d) % q;
+            }
+        return d;
+
 4. Definire la resistenza alle collisioni per le funzioni di hash, e discuterne le conseguenze per la sicurezza della firma elettronica
 5. Descrivere il NAT, il NAPT, e le loro implicazioni per la sicurezza
 6. Descrivere l’attacco di tipo DOS noto come "syn flooding”
@@ -53,7 +61,22 @@
    4. [x] provoca una errata associazione tra indirizzi MAC  e indirizzi IP
    5. [ ] provoca una errata associazione tra URL http e indirizzi IP
 3. Definizione di radice primitiva di un numero $q$ e metodo per generarne una
-4. Dimostrare che $ab\ mod\ M = (a\ mod\ M)(b\ mod\ M)\ mod\ M$
+4. Dimostrare che $(ab)\ mod\ M = (a\ mod\ M)(b\ mod\ M)\ mod\ M$
+   
+    Siano 
+   - $a\ mod \ M = x$ con $x < M$
+   - $b\ mod \ M = y$ con $y < M$
+
+    Allora $(\exists k, j)$ tale che:
+   - $Mk+x=a$
+   - $Mj+y=b$
+
+    Pertanto:
+
+    $(ab)\ mod\  M = ((Mk+x)(Mj+y))\ mod\ M=$
+    $= ((MkMj+Mky+Mjx+xy))\ mod\ M=$
+    $=xy\ mod\ M=(a \ mod\ M)(b\ mod\ M)\ mod\  M$
+    rimane $xy$ perché gli altri sono tutti multipli di $M$
 5. Disegnare una topologia di rete locale con firewall in HA (high availability)
 6. Differenza tra modalità tunnel e transport in una VPN
 
@@ -209,22 +232,25 @@
 
 ## 2016-09-02
 
-1. Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità
-2. La tecnica nota come ARP poisoning
+1. **Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità**
+2. **La tecnica nota come ARP poisoning**
    1. [ ] realizza un buffer overflow sul server ARP
    2. [ ] realizza un buffer overflow sul firewall
    3. [ ] invia una risposta ARP con indirizzi IP modificati
    4. [x] invia una risposta ARP con indirizzi MAC modificati
    5. [ ] invia una risposta ARP causando un buffer overflow
-3. Il Syn flooding
+3. **Il Syn flooding**
    1. [ ] è un attacco di buffer overflow
    2. [x] è un attacco DOS che può essere utilmente abbinato ad IP spoofing
    3. [ ] è un attacco DOS, non abbinabile ad IP spoofing
    4. [ ] richiede una modifica del layer TCP del server
    5. [ ] permette di modificare i cookie di sessione
-4. Dimostrare che esistono infiniti numeri primi e discuterne le conseguenze in crittologia
-5. Discutere il concetto di non disconoscibilità nella firma elettronica
-6. Descrivere il concetto di DMZ, con una possibile topologia di rete, e spiegare perché è utile per la sicurezza di una rete locale
+4. **Dimostrare che esistono infiniti numeri primi e discuterne le conseguenze in crittologia**
+5. **Discutere il concetto di non disconoscibilità nella firma elettronica.**
+   Il documento informatico munito di firma digitale o firma elettronica avanzata sembrerebbe in realtà non disconoscibile;
+    Infatti per verificare la firma apposta su un foglio è necessario procedere ad un esame grafologico, nel caso di documento informatico sottoscritto con firma digitale basta verificare la corrispondenza della firma con la chiave pubblica del presunto sottoscrittore per accertarne la provenienza. Conseguentemente, il disconoscimento della firma digitale **sarebbe precluso**, perché con la corrispondenza tra la chiave pubblica e la chiave privata vengono accertate  sia la **provenienza** del documento che **l’assenza di alterazioni** del medesimo.
+    L’unica ipotesi di falsità materiale che può configurarsi (atteso che le alterazioni materiali del documento sono da escludere grazie alla funzione di hash), è che la firma sia apposta da **persona diversa dal legittimo proprietario** del dispositivo di firma. Di conseguenza, l'oggetto del disconoscimento non sarà relativo alla firma ma all'effettivo utilizzo della firma digitale da parte del titolare. 
+6. **Descrivere il concetto di DMZ, con una possibile topologia di rete, e spiegare perché è utile per la sicurezza di una rete locale**
 
 ## 2016-09-19
 1.  Descrivere un metodo percalcolare la radice primitiva a di un primo q, dimostrarne la correttezza
