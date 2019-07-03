@@ -1,29 +1,30 @@
 ## 2013-07-08
 
-1. La certificazione ISO 27001 e' rilasciata in Italia da:
+1. **La certificazione ISO 27001 e' rilasciata in Italia da:**
    1. [ ] OWASP
    2. [ ] un Organismo di Certificazione Accreditato da OWASP
    3. [ ] Accredia
    4. [x] un Organismo di Certificazione Accreditato da Accredia
    5. [ ] una Autorità di Certificazione abilitata dall’Agenzia per l’Italia Digitale
-2. In IPSEC vengono cifrate le seguenti informazioni:
+2. **In IPSEC vengono cifrate le seguenti informazioni:**
    1. [x] **forse** header di livello 2
    2. [ ] MAC address
    3. [ ] trailer di livello 2
    4. [ ] porta TCP
    5. [ ] CRC Ethernet
-3. Calcolo efficiente di  $a^b\  mod \ q$ mediante il metodo iterativo
+3. **Calcolo efficiente di  $a^b\  mod \ q$ mediante il metodo iterativo**
    $b = b_k...b_2b_1b_0$
 
         for (i = k; i ≥ 0; i--) {
+            d = d*d % q;
             if (b[i] == 1)
                 d = (d*d) % q;
             }
         return d;
 
-4. Definire la resistenza alle collisioni per le funzioni di hash, e discuterne le conseguenze per la sicurezza della firma elettronica
-5. Descrivere il NAT, il NAPT, e le loro implicazioni per la sicurezza
-6. Descrivere l’attacco di tipo DOS noto come "syn flooding”
+4. **Definire la resistenza alle collisioni per le funzioni di hash, e discuterne le conseguenze per la sicurezza della firma elettronica**
+5. **Descrivere il NAT, il NAPT, e le loro implicazioni per la sicurezza**
+6. **Descrivere l’attacco di tipo DOS noto come "syn flooding”**
 
 ## 2013-09-02
 
@@ -232,7 +233,17 @@
 
 ## 2016-09-02
 
-1. **Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità**
+1. **Descrivere il metodo ricorsivo per il calcolo dell’esponente modulare e discuterne la complessità.**
+   
+        int expmod (int a, int b, int q) {
+            if (b == 0)
+                return 0;
+            if (b % 2 == 0)
+                return sq(expmod(a, b/2, q)) % q;
+            else
+                return sq(expmod(a, b-1, q)) % q;
+        }
+    
 2. **La tecnica nota come ARP poisoning**
    1. [ ] realizza un buffer overflow sul server ARP
    2. [ ] realizza un buffer overflow sul firewall
@@ -246,11 +257,20 @@
    4. [ ] richiede una modifica del layer TCP del server
    5. [ ] permette di modificare i cookie di sessione
 4. **Dimostrare che esistono infiniti numeri primi e discuterne le conseguenze in crittologia**
-5. **Discutere il concetto di non disconoscibilità nella firma elettronica.**
+(EUCLIDE)
+   - Supponiamo che $p$ sia l’ultimo numero primo.  
+   - Sia $q = 2\times 3 \times 5 \times …\times p$ il prodotto dei numeri primi fino a $p$.   
+   - Se $q+1$ è primo, $p$ non era l’ultimo.   
+   - Se $q+1$ non è primo, è divisibile per $r>p$ con $r$ primo (in quanto non e' divisibile per alcun primo fino a $p$). 
+   - Di nuovo $r>p$ quindi $p$ non e' l'ultimo primo
+
+    Questo viene utilizzato nello scambio di chiavi **Diffie-Hellman** in cui si utilizza l'aritmetica modulo $n$ che dev'essere primo. Un numero troppo piccolo rende lo scambio di chiavi poco sicuro e vulnerabile ad attacchi di forza bruta, quindi serve un numero sufficientemente grande da rendere un tale attacco computazionalmente impossibile.
+1. **Discutere il concetto di non disconoscibilità nella firma elettronica.**
    Il documento informatico munito di firma digitale o firma elettronica avanzata sembrerebbe in realtà non disconoscibile;
     Infatti per verificare la firma apposta su un foglio è necessario procedere ad un esame grafologico, nel caso di documento informatico sottoscritto con firma digitale basta verificare la corrispondenza della firma con la chiave pubblica del presunto sottoscrittore per accertarne la provenienza. Conseguentemente, il disconoscimento della firma digitale **sarebbe precluso**, perché con la corrispondenza tra la chiave pubblica e la chiave privata vengono accertate  sia la **provenienza** del documento che **l’assenza di alterazioni** del medesimo.
     L’unica ipotesi di falsità materiale che può configurarsi (atteso che le alterazioni materiali del documento sono da escludere grazie alla funzione di hash), è che la firma sia apposta da **persona diversa dal legittimo proprietario** del dispositivo di firma. Di conseguenza, l'oggetto del disconoscimento non sarà relativo alla firma ma all'effettivo utilizzo della firma digitale da parte del titolare. 
-6. **Descrivere il concetto di DMZ, con una possibile topologia di rete, e spiegare perché è utile per la sicurezza di una rete locale**
+2. **Descrivere il concetto di DMZ, con una possibile topologia di rete, e spiegare perché è utile per la sicurezza di una rete locale.**
+   Una demilitarized zone (DMZ), è una sottorete isolata, fisica o logica, che contiene dei servizi informatici offerti da un’azienda, accessibili sia da reti esterne non protette (WAN), che da workstation interne alla stessa azienda (intranet) e il cui scopo è quello di far usufruire questi servizi nella maniera più sicura possibile, senza compromettere la sicurezza della rete aziendale. Questa zona si trova nell'ambito di una topologia di rete chiamata Screened Subnet.
 
 ## 2016-09-19
 1.  Descrivere un metodo percalcolare la radice primitiva a di un primo q, dimostrarne la correttezza
