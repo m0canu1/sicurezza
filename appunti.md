@@ -396,9 +396,58 @@ Parametri su cui si valuta **il rischio informatico**:
 - **Probabilità dell'evento**
 - **Impatto**
 
-## ISO 27001
+## ISO 27001 (approccio per processi)
 
-## OWASP 
+- Normativa internazionale che prevede il **rilascio di una certificazione** da parte di un **ente accreditato** (In Italia da Accredia).
+
+- Fornisce i requisiti per attuare e mantenere un **INFORMATION SECURITY MANAGEMENT SYSTEM (ISMS)** secondo un approccio per processi.
+  - ha in **input** i requisiti di sicurezza
+  - **output** i risultati attesi attraverso un approccio per processi
+  - **ISMS** costantemente migliorato tramite **PDCA** (Plan-Do-Check-Act)
+
+#### PDCA
+  
+  - **PLAN** - definizione di *ISMS*
+    1. Definire il perimetro
+    2. Scrivere una "Politica dell'ISMS"
+    3. Analizzare e valutare il rischio
+    4. Trattare il rischio
+    5. Ottenere approvazione ed autorizzazione
+    6. Redigere lo "Statement of Applicability"
+  - **DO** - implementazione
+    1. Definire un piano di implementazione
+    2. Realizzare i controlli selezionati
+    3. Misurare l'efficacia dei controlli realizzati
+    4. Attuare un piano di formazione
+    5. Gestire l'operatività dei controlli e la loro manutenzione ed evoluzione ordinaria
+  - **CHECK** - monitoraggio
+    1. Monitoraggio per rilevare problemi (in particolare in quelli modificati dai controlli implementati)
+    2. Riesame proattivo
+    3. Riesame della valutazione dei rischi residui
+  - **ACT** - miglioramento
+    1. Identificare i miglioramenti necessari, sulla base delle risultanze della fase di check
+    2. Attuare i miglioramenti sopra definiti
+    3. Verificare che i miglioramenti siano efficaci
+
+
+## OWASP (approccio tecnologico, ma collegato a parametri rilevanti per il business)
+
+- È un'organizzazione non profit focalizzata al miglioramento della sicurezza dei software
+- Basato sui concetti di:
+  - rischio
+  - minaccia
+  - agente della minaccia
+  - vulnerabilità
+  - impatto
+- Gravità del rischio = $f(probabilità, impatto)$
+- Probabilità = $g(agente della minaccia, vulnerabilità)$
+- Impatto = $h(impatto tecnologico, impatto di business)$
+- **5 STEP**
+  1. Identificare il rischio
+  2. Valutare la probabilità (likelihood)
+  3. Valutare l'impatto
+  4. Calcolare la gravità del rischio
+  5. Decidere le contromisure
 
 ### TOP 10
 
