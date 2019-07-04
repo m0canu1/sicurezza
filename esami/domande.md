@@ -15,7 +15,7 @@
 3. **Calcolo efficiente di  $a^b\  mod \ q$ mediante il metodo iterativo**
    $b = b_k...b_2b_1b_0$
 
-        for (i = k; i ≥ 0; i--) {
+        for (i = k; i >= 0; i--) {
             d = d*d % q;
             if (b[i] == 1)
                 d = (d*d) % q;
