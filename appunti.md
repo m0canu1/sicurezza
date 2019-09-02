@@ -141,7 +141,7 @@ altamente sicuro esso stesso
 
 Un'altra regola importante e' bloccare tutti i pacchetti con l'opzione di **source routing** perche' **permette IP spoofing** con TCP su WAN.
 
-  1. **Application Proxy**
+  2. **Application Proxy**
       - Connessioni dirette tra interno ed esterno sono **proibite** 
       - Possibili solo connessioni attraverso il firewall
       - Ogni servizio dev'essere configurato
@@ -391,7 +391,63 @@ Può esserci, però, il **double spending** con cui un utente, paga doppiamente
 
 # Risk Management
 
-## OWASP
+Parametri su cui si valuta **il rischio informatico**:
+- **Perimetro**
+- **Probabilità dell'evento**
+- **Impatto**
+
+## ISO 27001 (approccio per processi)
+
+- Normativa internazionale che prevede il **rilascio di una certificazione** da parte di un **ente accreditato** (In Italia da Accredia).
+
+- Fornisce i requisiti per attuare e mantenere un **INFORMATION SECURITY MANAGEMENT SYSTEM (ISMS)** secondo un approccio per processi.
+  - ha in **input** i requisiti di sicurezza
+  - **output** i risultati attesi attraverso un approccio per processi
+  - **ISMS** costantemente migliorato tramite **PDCA** (Plan-Do-Check-Act)
+
+#### PDCA
+  
+  - **PLAN** - definizione di *ISMS*
+    1. Definire il perimetro
+    2. Scrivere una "Politica dell'ISMS"
+    3. Analizzare e valutare il rischio
+    4. Trattare il rischio
+    5. Ottenere approvazione ed autorizzazione
+    6. Redigere lo "Statement of Applicability"
+  - **DO** - implementazione
+    1. Definire un piano di implementazione
+    2. Realizzare i controlli selezionati
+    3. Misurare l'efficacia dei controlli realizzati
+    4. Attuare un piano di formazione
+    5. Gestire l'operatività dei controlli e la loro manutenzione ed evoluzione ordinaria
+  - **CHECK** - monitoraggio
+    1. Monitoraggio per rilevare problemi (in particolare in quelli modificati dai controlli implementati)
+    2. Riesame proattivo
+    3. Riesame della valutazione dei rischi residui
+  - **ACT** - miglioramento
+    1. Identificare i miglioramenti necessari, sulla base delle risultanze della fase di check
+    2. Attuare i miglioramenti sopra definiti
+    3. Verificare che i miglioramenti siano efficaci
+
+
+## OWASP (approccio tecnologico, ma collegato a parametri rilevanti per il business)
+
+- È un'organizzazione non profit focalizzata al miglioramento della sicurezza dei software
+- Basato sui concetti di:
+  - rischio
+  - minaccia
+  - agente della minaccia
+  - vulnerabilità
+  - impatto
+- Gravità del rischio = $f(probabilità, impatto)$
+- Probabilità = $g(agente della minaccia, vulnerabilità)$
+- Impatto = $h(impatto tecnologico, impatto di business)$
+- **5 STEP**
+  1. Identificare il rischio
+  2. Valutare la probabilità (likelihood)
+  3. Valutare l'impatto
+  4. Calcolare la gravità del rischio
+  5. Decidere le contromisure
 
 ### TOP 10
 
